@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="language" content="bg" />
+        <title>Картички</title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="jquery.slides.min.js"></script>
+        <script src="slider.js"></script>
+        
+        <link href="node_modules/lightbox2/src/css/lightbox.css" rel="stylesheet">        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+    </head>
+    
+    <body>
+        <div id="main-container">
+                        
+                <div id="combined">
+                    
+                    <div id="side-menu"> 
+                        <li><a id="cart" href="cart.html" title="Кошница"></a></li>
+                        <li><a id="facebook" href="http://www.facebook.bg"></a></li>                 
+                    </div>    
+                   
+                    <div id="menu">
+                        <ul>
+                            <li><a id="first"  href="index.html">Начало</a></li> 
+                            <li id="dropdown"><a class="active" href="cards.html">Картички</a>
+                                 <ul>
+			                     	<li><a href="#">1</a></li>
+			                     	<li><a href="#">2</a></li>
+			                     	<li><a href="#">3</a></li>
+			                     </ul>
+                            </li>                                 
+                            <li><a id="flowers" href="flowers.html">Цветя</a></li> 
+                            <li><a  href="about.html">За нас</a></li> 
+                            <li><a id="last" href="contact.html">Контакти</a></li>   
+                        </ul>
+                     </div>
+                    
+                    <div id="logo"></div>
+                    
+                    <div id="container_singlecard">
+                        
+                        <p id="title">Покани</p>
+                        <li id="back"><a href="cards.html">назад</a></li>
+                        <hr id="cards_single_line">
+                        <div id="gallery">
+                            <div id="large_img"><a href="img/card.jpg" data-lightbox="card1"></a></div>
+                            <div id="small_img1"><a href="img/3.jpg" data-lightbox="card1"></a></div>
+                            <div id="small_img2"><a href="img/4.png" data-lightbox="card1"></a></div>
+                            <div id="small_img3"><a href="img/back.jpg" data-lightbox="card1"></a></div>
+                        </div>
+                        <p id="card_name">Тук трябва да стои името на картичката</p>
+                        <p id="card_description">Тук трябва да стои описание</p>
+                        <p id="card_price">Цена: <span id="price_bold">4.99</span> лв.</p>
+                        <p id="buy_header">Добави в кошницата:</p>
+                        <hr id="buy_line">
+                        <div>
+                            <span id="input_count">бр.:</span> <input  type="text" name="count" value="1" maxlength="3">
+                            <span id="input_price">цена:</span> <input  type="text" name="price" value="4.99" readonly> лв.
+                            <li id="add"><a href="cards.html">добави</a></li>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div id="footer">
+                    <li><a href="about.html">За нас</a><span>|</span></li>
+                    <li><a href="cart.html">Кошница</a><span>|</span></li>
+                    <li><a href="http://www.google.bg">Как да поръчам</a><span>|</span></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </div>
+                <br>
+                <div id="copyright">Copyright © Тодор Гърнев</div>
+            
+        </div>
+     <script src="node_modules/lightbox2/src/js/lightbox.js"></script>    
+    </body>
+    
+</html>
