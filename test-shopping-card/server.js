@@ -6,4 +6,4 @@ app.use(express.static(__dirname + '/'));
 // Routes
 app.use('/', require('./routes/api'));
 
-app.listen(80);
+app.listen(8000);

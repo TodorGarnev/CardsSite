@@ -9,6 +9,23 @@
 	<button class="edit" ng-click="edit()">EDIT</button>
 	<button class="update" ng-click="update()">UPDATE</button>
 	<button class="delete" ng-click="delete()">DELETE</button>
+
+	<table border="1">
+		<thead>
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Price</td>
+			<td>Quantity</td>
+		</tr>
+		</thead>
+		<tr>
+			<td>{{ test.id }}</td>
+			<td>{{ test.name }}</td>
+			<td>{{ test.price }}</td>
+			<td>{{ test.quantity }}</td>
+		</tr>
+	</table>
 </div>
 
 <script src="node_modules/angular/angular.js"></script>

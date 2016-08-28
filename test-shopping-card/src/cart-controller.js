@@ -1,8 +1,15 @@
-myCardSiteControllers.controller('CartCtrl', function($scope) {
+myCardSiteControllers.controller('CartCtrl', function($scope, $resource) {
+
+	$scope.test = {};
 
 	$scope.add = function() {
-		console.log('add called');
+		var Cards = $resource('/cards', {});
+		Cards.get({}, function(cards) {
+			$scope.test = (cards.toJSON()).data[0];
 
+
+			console.log($scope.test);
+		});
 	};
 
 	$scope.update = function(product) {
