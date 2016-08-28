@@ -1,0 +1,22 @@
+{
+  "name": "test-shopping-card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/TodorGarnev/CardsSite.git"
+  },
+  "author": "Todor Garnev",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mysql": "^2.11.1"
+  }
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html ng-app="myCardSite">
+<head>
+	<title>Todor Cart</title>
+</head>
+<body>
+<div class="container" ng-controller="CartCtrl">
+	<button class="add" ng-click="add()">ADD</button>
+	<button class="edit" ng-click="edit()">EDIT</button>
+	<button class="update" ng-click="update()">UPDATE</button>
+	<button class="delete" ng-click="delete()">DELETE</button>
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-resource/angular-resource.js"></script>
+<script src="src/app.js"></script>
+<script src="src/cart-controller.js"></script>
+</body>
+</html>
