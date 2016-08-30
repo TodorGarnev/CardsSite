@@ -5,7 +5,19 @@
 </head>
 <body>
 <div class="container" ng-controller="CartCtrl">
-	<button class="add" ng-click="add()">ADD</button>
+    
+    Name: <input type="text" ng-model="card.name">
+    <br>
+    <br>
+    Price: <input type="text" ng-model="card.price"> //май ще трябва да се превърне от стринг в число по някакъв начин
+    <br>
+    <br>
+    Quantity: <input type="number" ng-model="card.quantity">
+    <br>
+    <br>
+    
+	<button class="print" ng-click="print()">PRINT</button> <!-- printing DB data (all cards in the cart) -->
+    <button class="edit" ng-click="add(card)">ADD</button>
 	<button class="edit" ng-click="edit()">EDIT</button>
 	<button class="update" ng-click="update()">UPDATE</button>
 	<button class="delete" ng-click="delete()">DELETE</button>
@@ -13,17 +25,17 @@
 	<table border="1">
 		<thead>
 		<tr>
-			<td>ID</td>
-			<td>Name</td>
-			<td>Price</td>
-			<td>Quantity</td>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
 		</tr>
 		</thead>
-		<tr>
-			<td>{{ test.id }}</td>
-			<td>{{ test.name }}</td>
-			<td>{{ test.price }}</td>
-			<td>{{ test.quantity }}</td>
+		<tr ng:repeat="item in items">
+            <td>{{item.id}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.price}}</td>
+			<td>{{item.quantity}}</td>
 		</tr>
 	</table>
 </div>
