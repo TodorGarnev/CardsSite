@@ -2,6 +2,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require("mysql");
+var http = require("http");
 
 // Connection to DB (MySQL)
 var con = mysql.createConnection({
@@ -51,26 +52,48 @@ router.get('/', function(req, res){
 }); 
 
 
-//POST request to /cards
- router.get('/cards', function(req, res) {
-     
-     var card = {
-            
-            name        : card.name,
-            price       : card.price,
-            quantity    : card.quantity,
-    };
-     
-	con.query('INSERT * INTO cards SET ?', card, function (err, rows) {
-		if(err) throw err;
-
-		console.log('>>> card: ',card); 
+/* //POST request to /add
+router.post('/add', function(req, res) {
+    var card = { name: "fourth card", price: "2.25", quantity: "7" };
+    con.query('INSERT INTO cards SET ?', card, function(err,res){
+        if(err) throw err;
         
-		res.send({'card': card}); 
-	});
-});
+        console.log('Last insert ID:', res.insertId);
+        //res.send({'data': card});
+    });
+}); */
 
 
 
+router.post('/add', function(req, res, next) {
+    var card = req.body;
+    console.log('request received:', req.body);
+   var query = connection.query('insert into cards set ?', card, function (err, result) {
+    if (err) {
+        console.error(err);
+        return res.send(err);
+    } else {
+        return res.send('Ok');
+    }
+    });
+    res.send('received the data.');
+    });
+
+//app.listen(8000);
+
+
+
+
+    
 // Return router
 module.exports = router;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

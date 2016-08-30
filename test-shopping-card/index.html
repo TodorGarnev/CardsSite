@@ -9,7 +9,7 @@
     Name: <input type="text" ng-model="card.name">
     <br>
     <br>
-    Price: <input type="text" ng-model="card.price"> //май ще трябва да се превърне от стринг в число по някакъв начин
+    Price: <input type="number" ng-model="card.price"> 
     <br>
     <br>
     Quantity: <input type="number" ng-model="card.quantity">
@@ -17,7 +17,7 @@
     <br>
     
 	<button class="print" ng-click="print()">PRINT</button> <!-- printing DB data (all cards in the cart) -->
-    <button class="edit" ng-click="add(card)">ADD</button>
+    <button class="add" ng-click="add()">ADD</button>
 	<button class="edit" ng-click="edit()">EDIT</button>
 	<button class="update" ng-click="update()">UPDATE</button>
 	<button class="delete" ng-click="delete()">DELETE</button>
