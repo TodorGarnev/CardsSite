@@ -2,7 +2,6 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require("mysql");
-var http = require("http");
 
 // Connection to DB (MySQL)
 var con = mysql.createConnection({
