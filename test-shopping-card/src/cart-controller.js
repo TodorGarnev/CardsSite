@@ -1,17 +1,31 @@
-myCardSiteControllers.controller('CartCtrl', function($scope, $resource) {
+// The main cart controller
 
-	$scope.test = {};
+myCardSiteControllers.controller('CartCtrl', function($scope, $resource, $http) {
 
-	$scope.add = function() {
+	$scope.items = {};
+
+	$scope.print = function() {
 		var Cards = $resource('/cards', {});
 		Cards.get({}, function(cards) {
-			$scope.test = (cards.toJSON()).data[0];
-
-
-			console.log($scope.test);
+            $scope.items = (cards.toJSON()).data;  //data variable is sent from api.js
+          
+			console.log($scope.items); //the result is shown in browser's console log
+           
 		});
 	};
-
+    
+    $scope.add = function(card) {
+        $scope.add = function () {
+        
+            console.log($scope.card);
+            
+            $resource('/add', {'name':'proba','price':'5','quantity':'5'}, {method: "POST"});
+                      
+        } 
+	}; 
+    
+   
+    
 	$scope.update = function(product) {
 		console.log('update');
 	};
