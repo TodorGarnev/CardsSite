@@ -15,13 +15,8 @@ myCardSiteControllers.controller('CartCtrl', function($scope, $resource, $http) 
 	};
     
     $scope.add = function(card) {
-        $scope.add = function () {
-        
-            console.log($scope.card);
-            
-            $resource('/add', {'name':'proba','price':'5','quantity':'5'}, {method: "POST"});
-                      
-        } 
+        $resource('/add', {'name': 'proba', 'price': '5', 'quantity': '5'}, {method: "POST"});
+        console.log('>>> add clicked');
 	}; 
     
    
