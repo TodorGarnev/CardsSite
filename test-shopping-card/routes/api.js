@@ -46,7 +46,7 @@ router.get('/', function(req, res){
 		}
 
 		console.log('>>> arr: ', arrCards); //it is shown in nodejs console log
-        
+
 		res.send({'data': arrCards}); //its is shown in /cards; we send this data to cart-controller.js
 	});
 }); 
@@ -54,14 +54,14 @@ router.get('/', function(req, res){
 
  //POST request to /add
 router.post('/add', function(req, res) {
-    console.log('>>>res:', res);
-    console.log('>>>req:', req);
-    var card = { name: "fourth card", price: "2.25", quantity: "7" };
-    con.query('INSERT INTO cards SET ?', card, function(err,res){
+    console.log('>>> name:', req.body.name);
+    console.log('>>>> price:', req.body.price);
+    console.log('>>> quantity:', req.body.quantity);
+    var objCard = { name: req.body.name, price: req.body.price, quantity: req.body.quantity };
+    con.query('INSERT INTO cards SET ?', objCard, function(err, res){
         if(err) throw err;
-        
-        console.log('>>>',res);
-        //res.send({'data': card});
+
+        console.log('>>> affectedRows: ',res.affectedRows);
     });
 }); 
 

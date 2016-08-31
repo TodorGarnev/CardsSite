@@ -6,6 +6,7 @@ myCardSiteControllers.controller('CartCtrl', function($scope, $resource, $http) 
 
 	$scope.print = function() {
 		var Cards = $resource('/cards', {});
+
 		Cards.get({}, function(cards) {
             $scope.items = (cards.toJSON()).data;  //data variable is sent from api.js
           
@@ -15,8 +16,14 @@ myCardSiteControllers.controller('CartCtrl', function($scope, $resource, $http) 
 	};
     
     $scope.add = function(card) {
-        $resource('/add', {'name': 'proba', 'price': '5', 'quantity': '5'}, {method: "POST"});
-        console.log('>>> add clicked');
+	    var AddCard = $resource('/add',
+		      {name: '@name', price: '@price', quantity: '@quantity'}, {
+			      charge: {
+				      method:'POST',
+				      params:{ charge: true}}
+		      });
+
+	    AddCard.charge({'name': 'Valentine Card', 'price': '50.0', 'quantity': '15'});
 	}; 
     
    
