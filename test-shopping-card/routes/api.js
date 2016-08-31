@@ -3,6 +3,9 @@ var express = require('express');
 var router = express.Router();
 var mysql = require("mysql");
 var http = require("http");
+var bodyParser  = require('body-parser');
+
+
 
 // Connection to DB (MySQL)
 var con = mysql.createConnection({
@@ -53,15 +56,12 @@ router.get('/', function(req, res){
 
 
  //POST request to /add
-router.post('/add', function(req, res) {
-    console.log('>>>res:', res);
-    console.log('>>>req:', req);
+router.post('/add',function(req, res) {
+    console.log('>>>res:' ,req.body);
     var card = { name: "fourth card", price: "2.25", quantity: "7" };
     con.query('INSERT INTO cards SET ?', card, function(err,res){
         if(err) throw err;
         
-        console.log('>>>',res);
-        //res.send({'data': card});
     });
 }); 
 
