@@ -49,7 +49,7 @@ router.get('/', function(req, res){
 
 		res.send({'data': arrCards}); //its is shown in /cards; we send this data to cart-controller.js
 	});
-}); 
+});
 
 
  //POST request to /add
