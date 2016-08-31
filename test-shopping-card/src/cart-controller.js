@@ -19,7 +19,7 @@ myCardSiteControllers.controller('CartCtrl', function($scope, $resource, $http) 
         
             console.log($scope.card);
             
-            $resource('/add', {'name':'proba','price':'5','quantity':'5'}, {method: "POST"});
+            $resource('/add', {name:'proba',price:'5',quantity:'5'}, {method: "POST"});
                       
         } 
 	}; 
