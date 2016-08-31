@@ -2,15 +2,17 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require("mysql");
+var http = require("http");
 
-// First you need to create a connection to the db
+// Connection to DB (MySQL)
 var con = mysql.createConnection({
 	host: "localhost",
 	user: "root",
 	password: "",
-	database: "cards_site"
+	database: "card_site"
 });
 
+//information in the console.log about connection to DB - completed/error
 con.connect(function(err){
 	if(err){
 		console.log('Error connecting to Db');
@@ -20,11 +22,13 @@ con.connect(function(err){
 });
 
 
+//GET request to index.html during loading of the page
 router.get('/', function(req, res){
 	res.redirect('/index.html');
 });
 
-router.get('/cards', function(req, res) {
+//GET request to /cards
+ router.get('/cards', function(req, res) {
 	con.query('SELECT * FROM cards', function (err, rows) {
 		if(err) throw err;
 
@@ -41,12 +45,37 @@ router.get('/cards', function(req, res) {
 			arrCards.push(objData);
 		}
 
-		console.log('>>> arr: ', arrCards);
-
-		res.send({'data': arrCards});
+		console.log('>>> arr: ', arrCards); //it is shown in nodejs console log
+        
+		res.send({'data': arrCards}); //its is shown in /cards; we send this data to cart-controller.js
 	});
-});
+}); 
 
 
+ //POST request to /add
+router.post('/add', function(req, res) {
+    console.log('>>>res:', res);
+    console.log('>>>req:', req);
+    var card = { name: "fourth card", price: "2.25", quantity: "7" };
+    con.query('INSERT INTO cards SET ?', card, function(err,res){
+        if(err) throw err;
+        
+        console.log('>>>',res);
+        //res.send({'data': card});
+    });
+}); 
+
+
+    
 // Return router
 module.exports = router;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
