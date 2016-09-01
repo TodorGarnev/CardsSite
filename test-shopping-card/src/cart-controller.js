@@ -24,6 +24,7 @@ myCardSiteControllers.controller('CartCtrl', function($scope, $resource, $http) 
 		      });
 
 	    AddCard.charge({'name': 'Valentine Card', 'price': '50.0', 'quantity': '15'}); 
+        console.log('Added');
     }; 
     
    
@@ -40,14 +41,10 @@ myCardSiteControllers.controller('CartCtrl', function($scope, $resource, $http) 
 				      params:{ charge: true}}
 		});
         
-        DelCard.charge({id:'17'});
+        DelCard.charge({id:'19'});
         console.log('Deleted');
 	};
     
     
-
-	$scope.edit = function(id) {
-		console.log('edit');
-	};
 
 });

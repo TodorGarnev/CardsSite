@@ -71,7 +71,7 @@ router.delete('/del/:id', function(req, res) {
 		con.query('DELETE FROM cards WHERE id = ?', req.params.id, function (err, result) {
 			if (err) throw err;
 
-			//console.log('Deleted rows: ', res);
+			//console.log('Deleted rows: ', res.complete);
 		});
 	}
 }); 
