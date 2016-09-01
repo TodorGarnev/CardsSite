@@ -31,8 +31,8 @@
 			<th>Quantity</th>
 		</tr>
 		</thead>
-		<tr ng:repeat="item in items">
-            <td>{{item.id}}</td>
+		<tr ng:repeat="item in items" id="{{item.id}}">
+      <td>{{item.id}}</td>
 			<td>{{item.name}}</td>
 			<td>{{item.price}}</td>
 			<td>{{item.quantity}}</td>

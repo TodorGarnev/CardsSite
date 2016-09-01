@@ -66,13 +66,14 @@ router.post('/add', function(req, res) {
 
 //DELETE request to /del
 router.delete('/del/:id', function(req, res) {
-     console.log('>>> id:', req.body);
-     var delCard = { id: req.body.id };    
-    con.query('DELETE FROM cards WHERE id = ?', delCard, function (err, result) {
-        if (err) throw err;
+	console.log('>>> id:', req.params.id);
+	if (req.params.id) {
+		con.query('DELETE FROM cards WHERE id = ?', req.params.id, function (err, result) {
+			if (err) throw err;
 
-        console.log('Deleted rows: ', res.affectedRows);
-    });
+			//console.log('Deleted rows: ', res);
+		});
+	}
 }); 
 
 

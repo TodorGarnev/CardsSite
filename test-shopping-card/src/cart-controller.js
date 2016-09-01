@@ -38,9 +38,9 @@ myCardSiteControllers.controller('CartCtrl', function($scope, $resource, $http) 
 			      charge: {
 				      method:'DELETE',
 				      params:{ charge: true}}
-    		      });
+		});
         
-        DelCard.charge({id:'13'});
+        DelCard.charge({id:'17'});
         console.log('Deleted');
 	};
     
