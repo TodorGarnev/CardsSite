@@ -29,9 +29,21 @@ myCardSiteControllers.controller('CartCtrl', function($scope, $resource, $http) 
     
    
     
-	$scope.update = function(product) {
-		console.log('update');
+    
+	$scope.update = function() {
+		var UpdateCard = $resource('/update/:id', {id:'@id', quantity:'@quantity'}, {
+			      charge: {
+				      update: { method:'PUT'},
+				      params:{ charge: true}}
+		      });
+
+	    UpdateCard.charge({id:'15',quantity:'5'}); 
+        console.log('Updated');
+        console.log('id:',UpdateCard.id);
+        console.log('quantity:',UpdateCard.quantity);
 	};
+    
+    
     
     
 	$scope.delete = function() {
@@ -41,7 +53,7 @@ myCardSiteControllers.controller('CartCtrl', function($scope, $resource, $http) 
 				      params:{ charge: true}}
 		});
         
-        DelCard.charge({id:'19'});
+        DelCard.charge({id:'21'});
         console.log('Deleted');
 	};
     
