@@ -51,8 +51,7 @@ router.get('/', function(req, res){
 });
 
 
-
- //POST request to /add
+//POST request to /add
 router.post('/add', function(req, res) {
     console.log('>>> name:', req.body.name);
     console.log('>>>> price:', req.body.price);
@@ -63,10 +62,21 @@ router.post('/add', function(req, res) {
 
         console.log('>>> affectedRows: ',res.affectedRows);
     });
-}); 
+});
 
+//UPDATE request to /update
+	router.put('/update/:id/:quantity', function(req, res) {
+	console.log('>>> id:', req.params.id);
+	console.log('>>> quantity:', req.params.quantity);
 
+	if (req.params.id) {
+		con.query('UPDATE cards SET quantity = ? Where ID = ?', [req.params.quantity, req.params.id], function (err, result) {
+			if (err) throw err;
 
+			console.log('Changed ' + result.changedRows + ' rows');
+		});
+	}
+});
 
 //DELETE request to /del
 router.delete('/del/:id', function(req, res) {
@@ -78,40 +88,7 @@ router.delete('/del/:id', function(req, res) {
 			//console.log('Deleted rows: ', res.complete);
 		});
 	}
-}); 
+});
 
-
-
-
-
-//UPDATE request to /update
-router.delete('/update/:id', function(req, res) {
-	console.log('>>> id:', req.params.id);
-    onsole.log('>>> quantity:', req.params.quantity);
-    
-	if (req.body.id) {
-		con.query('UPDATE card SET quantity = ? Where ID = ?', [req.params.quantity, req.params.id], function (err, result) {
-                if (err) throw err;
-            
-                console.log('Changed ' + result.changedRows + ' rows');
-            });
-    }
-}); 
-
-
-
-
-
-    
 // Return router
 module.exports = router;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

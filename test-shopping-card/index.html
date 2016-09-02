@@ -17,9 +17,7 @@
     <br>
     
 	<button class="print" ng-click="print()">PRINT</button> <!-- printing DB data (all cards in the cart) -->
-    <button class="add" ng-click="add()">ADD</button>
-	<button class="update" ng-click="update()">UPDATE</button>
-	<button class="delete" ng-click="delete()">DELETE</button>
+	<button class="add" ng-click="add({name: 'asdsad', price: '123', quality: '12'})">ADD</button>
 
 	<table border="1">
 		<thead>
@@ -28,13 +26,16 @@
 			<th>Name</th>
 			<th>Price</th>
 			<th>Quantity</th>
+			<th>DEL</th>
 		</tr>
 		</thead>
 		<tr ng:repeat="item in items" id="{{item.id}}">
       <td>{{item.id}}</td>
 			<td>{{item.name}}</td>
 			<td>{{item.price}}</td>
-			<td>{{item.quantity}}</td>
+			<td><input type="number" min="0" value="{{ item.quantity }}" ng-model="test"></td>
+			<td><button class="update" ng-click="update(item.id, test)">UPDATE</button></td>
+			<td><button class="delete" ng-click="delete(item.id)">DELETE</button></td>
 		</tr>
 	</table>
 </div>
