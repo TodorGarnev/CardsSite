@@ -16,8 +16,8 @@
     <br>
     <br>
     
-	<button class="print" ng-click="print()">PRINT</button> <!-- printing DB data (all cards in the cart) -->
-	<button class="add" ng-click="add({name: 'asdsad', price: '123', quality: '12'})">ADD</button>
+	<button class="print" ng-click="printAll()">PRINT</button> <!-- printing DB data (all cards in the cart) -->
+	<button class="add" ng-click="add({name: 'asdsad', price: '123', quantity: '12'})">ADD</button>
 
 	<table border="1">
 		<thead>
@@ -34,7 +34,7 @@
 			<td>{{item.name}}</td>
 			<td>{{item.price}}</td>
 			<td><input type="number" min="0" value="{{ item.quantity }}" ng-model="test"></td>
-			<td><button class="update" ng-click="update(item.id, test)">UPDATE</button></td>
+			<td><button class="update" ng-click="update(item.id, 12)">UPDATE</button></td>
 			<td><button class="delete" ng-click="delete(item.id)">DELETE</button></td>
 		</tr>
 	</table>
@@ -43,6 +43,7 @@
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-resource/angular-resource.js"></script>
 <script src="src/app.js"></script>
+<script src="src/factories/db-factory.js"></script>
 <script src="src/cart-controller.js"></script>
 </body>
 </html>

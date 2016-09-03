@@ -44,7 +44,7 @@ router.get('/', function(req, res){
 			arrCards.push(objData);
 		}
 
-		console.log('>>> arr: ', arrCards); //it is shown in nodejs console log
+		//console.log('>>> arr: ', arrCards); //it is shown in nodejs console log
 
 		res.send({'data': arrCards}); //its is shown in /cards; we send this data to cart-controller.js
 	});
@@ -53,14 +53,14 @@ router.get('/', function(req, res){
 
 //POST request to /add
 router.post('/add', function(req, res) {
-    console.log('>>> name:', req.body.name);
+    /*console.log('>>> name:', req.body.name);
     console.log('>>>> price:', req.body.price);
-    console.log('>>> quantity:', req.body.quantity);
+    console.log('>>> quantity:', req.body.quantity);*/
     var objCard = { name: req.body.name, price: req.body.price, quantity: req.body.quantity };
     con.query('INSERT INTO cards SET ?', objCard, function(err, res){
         if(err) throw err;
 
-        console.log('>>> affectedRows: ',res.affectedRows);
+        //console.log('>>> affectedRows: ',res.affectedRows);
     });
 });
 
@@ -73,7 +73,7 @@ router.post('/add', function(req, res) {
 		con.query('UPDATE cards SET quantity = ? Where ID = ?', [req.params.quantity, req.params.id], function (err, result) {
 			if (err) throw err;
 
-			console.log('Changed ' + result.changedRows + ' rows');
+			//console.log('Changed ' + result.changedRows + ' rows');
 		});
 	}
 });
