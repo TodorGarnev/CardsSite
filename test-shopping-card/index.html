@@ -9,33 +9,45 @@
     Name: <input type="text" ng-model="card.name">
     <br>
     <br>
-    Price: <input type="number" ng-model="card.price"> 
+    Price: <input type="number" min="0" ng-model="card.price"> 
     <br>
     <br>
-    Quantity: <input type="number" ng-model="card.quantity">
+    Quantity: <input type="number" min="0" maxlength="3"  ng-model="card.quantity">
     <br>
     <br>
     
 	<button class="print" ng-click="printAll()">PRINT</button> <!-- printing DB data (all cards in the cart) -->
-	<button class="add" ng-click="add({name: 'asdsad', price: '123', quantity: '12'})">ADD</button>
+	<button class="add" ng-click="add({name: card.name, price: card.price, quantity: card.quantity})">ADD</button>
 
-	<table border="1">
+	<table border="1" border-collapse= "collapse"; ng-init="total=0;">
 		<thead>
 		<tr>
 			<th>ID</th>
 			<th>Name</th>
 			<th>Price</th>
 			<th>Quantity</th>
+            <th>Price</th>
+            <th>UPDATE</th>
 			<th>DEL</th>
 		</tr>
 		</thead>
-		<tr ng:repeat="item in items" id="{{item.id}}">
+		<tr ng:repeat="item in items">
       <td>{{item.id}}</td>
 			<td>{{item.name}}</td>
 			<td>{{item.price}}</td>
-			<td><input type="number" min="0" value="{{ item.quantity }}" ng-model="test"></td>
-			<td><button class="update" ng-click="update(item.id, 12)">UPDATE</button></td>
+			<td><input type="number" min="0" step="1" value="{{ item.quantity }}" ng-model="test"></td>
+            <td ng-init="$parent.total = total + item.price * item.quantity">Price: {{item.price * item.quantity | currency }}</td>
+            <td><button class="update" ng-click="update(item.id, test)">UPDATE</button></td>
 			<td><button class="delete" ng-click="delete(item.id)">DELETE</button></td>
+		</tr>
+        <tr>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+            <td>Total: {{ total | currency }}</td>
+            <th></th>
+			<th></th>
 		</tr>
 	</table>
 </div>
