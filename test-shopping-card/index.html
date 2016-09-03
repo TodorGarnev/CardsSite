@@ -12,14 +12,14 @@
     Price: <input type="number" min="0" ng-model="card.price"> 
     <br>
     <br>
-    Quantity: <input type="number" min="0" maxlength="3"  ng-model="card.quantity">
+    Quantity: <input type="number" min="0" ng-model="card.quantity">
     <br>
     <br>
     
 	<button class="print" ng-click="printAll()">PRINT</button> <!-- printing DB data (all cards in the cart) -->
 	<button class="add" ng-click="add({name: card.name, price: card.price, quantity: card.quantity})">ADD</button>
 
-	<table border="1" border-collapse= "collapse"; ng-init="total=0;">
+	<table border="1" ng-init="total=0;">
 		<thead>
 		<tr>
 			<th>ID</th>
