@@ -21,6 +21,10 @@ app.config(['$resourceProvider', '$routeProvider', function ($resourceProvider, 
 			templateUrl: 'views/cards.html',
 			controller: 'CardsCtrl'
 		})
+		.when('/flowers', {
+			templateUrl: 'views/flowers.html',
+			controller: 'FlowersCtrl'
+		})
 		.otherwise({redirectTo: '/'});
 
 }]).run([function () {
