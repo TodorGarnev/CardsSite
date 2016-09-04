@@ -31,14 +31,19 @@ body {
 
 /**** MENU ****/
 
-#menu {
-    width: 600px;
+.top-menu {
+    margin: 0;
+    padding-left: 0;
+    left: -10%;
+    position: relative;
 }
 
 #menu ul {
     margin: 0;
     list-style-type: none;
     overflow: hidden;
+    width: 425px;
+    padding: 0;
 }
 
 #menu li {
@@ -74,21 +79,13 @@ body {
     background-color: powderblue;
 }
 
-/* #cart {
-    width: 93px;
-    text-align: center;
-    padding-left: 15px;
-    background-image: url(img/cart.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-} */
-
 /**** SIDE MENU ICONS ****/
 
 #side-menu {
     list-style-type: none;
-    position: absolute;
-    margin-left: 470px;
+    position: relative;
+    margin: 0;
+    left: 43%;
 }
 
 #side-menu li {

@@ -9,51 +9,39 @@
 <body>
 <div id="main-container" ng-controller="MainCtrl">
 	<div id="combined">
-		<div id="side-menu">
+
+		<ul id="side-menu">
 			<li><a id="cart" href="#/cart" title="Кошница"></a></li>
 			<li><a id="facebook" href="http://www.facebook.bg"></a></li>
-		</div>
+		</ul>
 
-		<div id="menu">
-			<ul>
-				<li><a id="first" class="active" href="#/">Начало</a></li>
-				<li id="dropdown"><a href="#/cards">Картички</a>
-					<ul>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-					</ul>
-				</li>
-				<li><a id="flowers" href="flowers.html">Цветя</a></li>
-				<li><a href="about.html">За нас</a></li>
-				<li><a id="last" href="contact.html">Контакти</a></li>
-			</ul>
-		</div>
+		<menu class="top-menu"></menu>
 
 		<div id="logo"></div>
-
 
 		<div ng-view></div>
 	</div>
 </div>
-<div id="footer">
-	<li><a href="about.html">За нас</a><span>|</span></li>
-	<li><a href="/cart">Кошница</a><span>|</span></li>
-	<li><a href="http://www.google.bg">Как да поръчам</a><span>|</span></li>
-	<li><a href="contact.html">Контакти</a></li>
-</div>
-<br>
-<div id="copyright">Copyright © Тодор Гърнев</div>
+	<div id="footer">
+		<li><a href="about.html">За нас</a><span>|</span></li>
+		<li><a href="#/cart">Кошница</a><span>|</span></li>
+		<li><a href="http://www.google.bg">Как да поръчам</a><span>|</span></li>
+		<li><a href="contact.html">Контакти</a></li>
+	</div>
+	<br>
+	<div id="copyright">Copyright © Тодор Гърнев</div>
 
-<script src="node_modules/angular/angular.js"></script>
-<script src="node_modules/angular-resource/angular-resource.js"></script>
-<script src="node_modules/angular-route/angular-route.js"></script>
-<script src="node_modules/jquery/dist/jquery.js"></script>
-<script src="lib/jquery.slides.min.js"></script>
-<script src="lib/slider.js"></script>
-<script src="src/app.js"></script>
-<script src="src/controllers/main-controller.js"></script>
-<script src="src/factories/db-factory.js"></script>
-<script src="src/controllers/cart-controller.js"></script>
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/angular-resource/angular-resource.js"></script>
+	<script src="node_modules/angular-route/angular-route.js"></script>
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="lib/jquery.slides.min.js"></script>
+	<script src="lib/slider.js"></script>
+	<script src="src/app.js"></script>
+	<script src="src/controllers/main-controller.js"></script>
+	<script src="src/factories/db-factory.js"></script>
+	<script src="src/controllers/cart-controller.js"></script>
+	<script src="src/controllers/cards-controller.js"></script>
+	<script src="src/directives/menu.js"></script>
 </body>
 </html>
