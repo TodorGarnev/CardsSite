@@ -3,6 +3,11 @@ var express = require('express');
 var router = express.Router();
 var mysql = require("mysql");
 
+//GET request to index.html during loading of the page
+router.get('/', function(req, res){
+	res.redirect('/index.html');
+});
+
 // Connection to DB (MySQL)
 var con = mysql.createConnection({
 	host: "localhost",
@@ -18,12 +23,6 @@ con.connect(function(err){
 		return;
 	}
 	console.log('Connection established');
-});
-
-
-//GET request to index.html during loading of the page
-router.get('/', function(req, res){
-	res.redirect('/index.html');
 });
 
 //GET request to /cards

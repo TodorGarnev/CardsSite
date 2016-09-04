@@ -10,8 +10,12 @@ app.config(['$resourceProvider', '$routeProvider', function ($resourceProvider, 
 
 	$routeProvider
 		.when('/', {
-			templateUrl: 'index.html',
-			controller: 'MainController'
+			templateUrl: 'views/home.html',
+			controller: 'MainCtrl'
+		})
+		.when('/cart', {
+			templateUrl: 'views/shopping-cart.html',
+			controller: 'CartCtrl'
 		})
 		.otherwise({redirectTo: '/'});
 

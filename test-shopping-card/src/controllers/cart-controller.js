@@ -1,6 +1,8 @@
 // The main cart controller
 myCardSiteControllers.controller('CartCtrl', function ($scope, dbFactory) {
 
+	console.log('>>>> cart ctrl initiated...');
+
 	$scope.items = {};
 
 	$scope.printAll = function () {
