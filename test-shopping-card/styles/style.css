@@ -135,11 +135,11 @@ body {
 #logo {
     display: block;
     float: right;
-    margin-top: -160px;
+    margin-top: -145px;
     margin-right: 50px;
     width: 300px;
     height: 150px;
-    background-image: url(../img/logo1.gif);
+    //background-image: url(../img/logo1.gif);
     background-size: cover;
 }
 
@@ -258,7 +258,7 @@ a:hover.slidesjs-stop {
 
 #footer {
     margin-top: 20px;
-    margin-left: 335px;
+    margin-left: 780px;
 }
 
 #footer li {
@@ -270,8 +270,7 @@ a:hover.slidesjs-stop {
 #footer li a {
     text-decoration: none;
     color: mediumvioletred;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
     font-size: 13px;
 }
@@ -285,6 +284,7 @@ a:hover.slidesjs-stop {
 #copyright {
     text-align: right;
     margin-top: 25px;
+    margin-right: 450px;
     font-size: 13px;
     opacity: 0.5;
 }
@@ -432,7 +432,7 @@ a:hover.slidesjs-stop {
 
 #contact p {
     margin-left: 50px;
-    width: 400px;
+    width: 450px;
 }
 
 .contact_text {
@@ -771,7 +771,7 @@ a:hover.slidesjs-stop {
 
 /*******SHOPPING CART*******/
 
-#container_cart {
+.container_cart {
     margin: auto;
     border-radius: 3px;
     padding: 10px;
@@ -783,33 +783,23 @@ a:hover.slidesjs-stop {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#cart_table td, th {
+    border: 1px solid #4CAF50;
+    padding: 15px;
+    text-align: center;
+    
+}
+
+#cart_table {
+    margin-left: 100px;
+    border-collapse: collapse;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#cart_table th {
+    background-color: #4CAF50;
+    color: white;    
+}
 
 
 

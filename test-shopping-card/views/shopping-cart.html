@@ -1,6 +1,6 @@
-<div class="container" ng-controller="CartCtrl">
+<div class="container_cart" ng-controller="CartCtrl">
 
-	Name: <input type="text" ng-model="card.name">
+	<!-- Name: <input type="text" ng-model="card.name">
 	<br>
 	<br>
 	Price: <input type="number" min="0" ng-model="card.price">
@@ -8,13 +8,12 @@
 	<br>
 	Quantity: <input type="number" min="0" ng-model="card.quantity">
 	<br>
-	<br>
+	<br> -->
 
 	<button class="print" ng-click="printAll()">PRINT</button> <!-- printing DB data (all cards in the cart) -->
-	<button class="add" ng-click="add({name: card.name, price: card.price, quantity: card.quantity})">ADD</button>
+	<!-- <button class="add" ng-click="add({name: card.name, price: card.price, quantity: card.quantity})">ADD</button> -->
 
-	<table border="1" ng-init="total=0;">
-		<thead>
+	<table id="cart_table">
 		<tr>
 			<th>ID</th>
 			<th>Name</th>
@@ -24,7 +23,6 @@
 			<th>UPDATE</th>
 			<th>DEL</th>
 		</tr>
-		</thead>
 		<tr ng:repeat="item in items">
 			<td>{{item.id}}</td>
 			<td>{{item.name}}</td>
@@ -35,13 +33,13 @@
 			<td><button class="delete" ng-click="delete(item.id)">DELETE</button></td>
 		</tr>
 		<tr>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th></th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
 			<td>Total: {{ total | currency }}</td>
-			<th></th>
-			<th></th>
+			<td></td>
+			<td></td>
 		</tr>
 	</table>
 </div>

@@ -1,5 +1,5 @@
- $(function() {
-      $('#slides').slidesjs({
+$(function() {
+        $('#slides').slidesjs({
         width: 800,
         height: 300,
         play: {
@@ -10,3 +10,4 @@
         }
       });
     });
+
