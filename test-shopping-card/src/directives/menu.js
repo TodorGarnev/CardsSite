@@ -5,8 +5,6 @@ myCardSiteControllers.controller('MenuCtrl',
 		vm.navTitles = {
 			home: 'home',
 			cards: 'cards-birthday',
-			cards: 'cards-wedding',
-			cards: 'cards-other',
 			flowers: 'flowers',
 			about: 'about',
 			contacts: 'contacts'
