@@ -484,7 +484,7 @@ a:hover.slidesjs-stop {
 /*******CARDS*******/
 
 #cards_title {
-    margin: 20px 0 15px 25px;
+    margin: 20px 0 0 25px;
     text-align: left;
     font-size: 20px;
 }
@@ -819,17 +819,25 @@ a:hover.slidesjs-stop {
     border-radius: 5px;
     width: 60px;
     height: auto;
+    cursor: pointer;
 }
 #DeleteCart {
     margin-left: 100px;
     font-weight: bold;
     font-size: 14px;
+    cursor: pointer;
 }
 
 #order {
     margin-left: 350px;
     margin-bottom: 0;
     font-size: 27px;
+}
+
+.order_align {
+    font-size: 15px;
+    text-align: right;
+    padding-top: 0;
 }
 
 #order_hr {
@@ -840,8 +848,12 @@ a:hover.slidesjs-stop {
 
 #order_table {
     margin-left: 260px;
-    margin-bottom: 0;
+    margin-bottom: 50px;
 }
+
+#order_table td, tr {
+    padding: 0 10px 5px 0;
+ }
 
 #order_table input, textarea {
     background-image: url(../img/shadow.jpg);
@@ -855,10 +867,6 @@ a:hover.slidesjs-stop {
 #contact form td textarea {
     background-image: url(../img/shadow.jpg);
     border: 1px solid gray;
-
-
-
-
 
 
 
