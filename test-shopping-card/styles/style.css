@@ -86,6 +86,7 @@ body {
     position: relative;
     margin: 0;
     left: 43%;
+    z-index: 9999;
 }
 
 #side-menu li {
@@ -482,6 +483,21 @@ a:hover.slidesjs-stop {
 
 /*******CARDS*******/
 
+#cards_title {
+    margin: 20px 0 15px 25px;
+    text-align: left;
+    font-size: 20px;
+}
+
+#cards_hr {
+    margin-bottom: 50px;
+    opacity: 0.3;
+}
+
+.contact_text {
+    font-weight: bold;
+}
+
 #cards {
     margin-left: -10px;
     margin-top: 25px;
@@ -535,7 +551,7 @@ a:hover.slidesjs-stop {
 }
 
 .card img {
-    border: 10px solid white;
+    border: 10px solid pink;
     width: 200px;
     height: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
