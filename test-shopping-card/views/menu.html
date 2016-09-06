@@ -1,0 +1,15 @@
+<div id="menu">
+	<ul>
+		<li><a id="first" href="#/" ng-class="vm.navClass('{{ vm.navTitles.home }}')" ng-click="isCards = false">Начало</a></li>
+		<li id="dropdown"><a href="#/cards-birthday" ng-class="[vm.navClass('{{ vm.navTitles.cards }}'), {'active': isCards}]">Картички</a>
+			<ul>
+				<li><a href="#/cards-wedding" ng-click="isCards = true">Сватбени</a></li>
+				<li><a href="#/cards-birthday" ng-click="isCards = true">ЧРД</a></li>
+				<li><a href="#/cards-other" ng-click="isCards = true">Други</a></li>
+			</ul>
+		</li>
+		<li><a id="flowers" href="#/flowers" ng-class="vm.navClass('{{ vm.navTitles.flowers }}')" ng-click="isCards = true">Цветя</a></li>
+		<li><a href="#/about" ng-class="vm.navClass('{{ vm.navTitles.about }}')" ng-click="isCards = true">За нас</a></li>
+		<li><a id="last" href="#/contacts" ng-class="vm.navClass('{{ vm.navTitles.contacts }}')" ng-click="isCards = true">Контакти</a></li>
+	</ul>
+</div>
