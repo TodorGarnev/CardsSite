@@ -12,8 +12,6 @@ myCardSiteControllers.controller('MenuCtrl',
 
 		vm.navClass = function (page) {
 			var currentRoute = $location.path().substring(1) || 'home';
-			console.log('>>> currentRoute: ', currentRoute);
-			console.log('>>> page: ', page);
 			return page === currentRoute ? 'active' : '';
 		};
 
