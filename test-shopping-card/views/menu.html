@@ -1,15 +1,15 @@
 <div id="menu">
 	<ul>
-		<li><a id="first" class="active" href="#/">Начало</a></li>
-		<li id="dropdown"><a href="#/cards_birthday">Картички</a>
+		<li><a id="first" href="#/" ng-class="vm.navClass('{{ vm.navTitles.home }}')">Начало</a></li>
+		<li id="dropdown"><a href="#/cards_birthday" ng-class="vm.navClass('{{ vm.navTitles.cards }}')">Картички</a>
 			<ul>
 				<li><a href="#/cards_wedding">Сватбени</a></li>
 				<li><a href="#/cards_birthday">ЧРД</a></li>
 				<li><a href="#/cards_other">Други</a></li>
 			</ul>
 		</li>
-		<li><a id="flowers" href="#/flowers">Цветя</a></li>
-		<li><a href="#/about">За нас</a></li>
-		<li><a id="last" href="#/contacts">Контакти</a></li>
+		<li><a id="flowers" href="#/flowers" ng-class="vm.navClass('{{ vm.navTitles.flowers }}')">Цветя</a></li>
+		<li><a href="#/about" ng-class="vm.navClass('{{ vm.navTitles.about }}')">За нас</a></li>
+		<li><a id="last" href="#/contacts" ng-class="vm.navClass('{{ vm.navTitles.contacts }}')">Контакти</a></li>
 	</ul>
 </div>
