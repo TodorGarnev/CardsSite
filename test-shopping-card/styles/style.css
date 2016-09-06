@@ -86,7 +86,7 @@ body {
     position: relative;
     margin: 0;
     left: 43%;
-    z-index: 9999;
+    z-index: 10;
 }
 
 #side-menu li {
@@ -797,7 +797,7 @@ a:hover.slidesjs-stop {
 
 #cart_table td, th {
     border: 1px solid lightpink;
-    padding: 15px;
+    padding: 5px;
     text-align: center;
     
 }
@@ -813,10 +813,48 @@ a:hover.slidesjs-stop {
     color: white;    
 }
 
+.update, .delete, .order_button {
+    padding: 2px;
+    background-color: lightpink;
+    border-radius: 5px;
+    width: 60px;
+    height: auto;
+}
+#DeleteCart {
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 14px;
+}
 
+#order {
+    margin-left: 350px;
+    margin-bottom: 0;
+    font-size: 27px;
+}
 
+#order_hr {
+    margin-left: 345px;
+    width: 375px;
+    opacity: 0.3;
+}
 
+#order_table {
+    margin-left: 260px;
+    margin-bottom: 0;
+}
 
+#order_table input, textarea {
+    background-image: url(../img/shadow.jpg);
+    border: 1px solid gray;
+}
+
+#order_table input {
+    height: 25px;
+}
+
+#contact form td textarea {
+    background-image: url(../img/shadow.jpg);
+    border: 1px solid gray;
 
 
 

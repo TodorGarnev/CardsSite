@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../styles/style.css">
 <div class="container_cart" ng-controller="CartCtrl">
 
 	<!-- Name: <input type="text" ng-model="card.name">
@@ -11,7 +12,7 @@
 	<br> -->
 
 	<button class="print" ng-click="printAll()">PRINT</button> <!-- printing DB data (all cards in the cart) -->
-    
+
 	<!-- <button class="add" ng-click="add({name: card.name, price: card.price, quantity: card.quantity})">ADD</button> -->
 
 	<table id="cart_table">
@@ -19,28 +20,64 @@
 			<th>№</th>
 			<th>Артикул</th>
 			<th>Цена</th>
-			<th>Quantity</th>
-			<th>Price</th>
-			<th>UPDATE</th>
-			<th>DEL</th>
+			<th>Брой</th>
+			<th>Цена</th>
+			<th></th>
 		</tr>
 		<tr ng:repeat="item in items">
 			<td>{{item.id}}</td>
 			<td>{{item.name}}</td>
-			<td>{{item.price}}</td>
-			<td><input type="number" min="0" step="1" value="{{ item.quantity }}" ng-model="test"></td>
-			<td ng-init="$parent.total = total + item.price * item.quantity">Price: {{item.price * item.quantity | currency }}</td>
-			<td><button class="update" ng-click="update(item.id, test)">UPDATE</button></td>
-			<td><button class="delete" ng-click="delete(item.id)">DELETE</button></td>
+			<td>{{item.price}} лв.</td>
+			<td><input type="number" min="0"   value="{{ item.quantity }}" ng-model="test" />
+				<br>
+				<button class="update" ng-click="update(item.id, test)">смени</button>
+			</td>
+			<td ng-init="$parent.total = total + item.price * item.quantity">
+				{{item.price }} x {{ item.quantity }} = {{item.price * item.quantity }} лв.
+			</td>
+			<td><button class="delete" ng-click="delete(item.id)">изтрий</button></td>
 		</tr>
 		<tr>
 			<td></td>
 			<td></td>
 			<td></td>
 			<td></td>
-			<td>Total: {{ total | currency }}</td>
+			<td>Общо: {{ total }} лв.</td>
 			<td></td>
+			</tr>
+	</table>
+	<br>
+	<div id="DeleteCart" ng-click="">[ Изпразни кошницата ]</div>
+	<p id="order">Поръчка</p>
+	<hr id="order_hr">
+	<table id="order_table">
+		<tr>
+			<td class="order_align">Име</td>
+			<td><input type="text" name="name" required></td>
+		</tr>
+		<tr>
+			<td class="order_align">Фамилия</td>
+			<td><input type="text" name="name" required></td>
+		</tr>
+		<tr>
+			<td class="order_align">Адрес</td>
+			<td><textarea id="input_text" cols="50" rows="10" name="text" required></textarea></td>
+		</tr>
+		<tr>
+			<td class="order_align">Email</td>
+			<td><input type="email" name="_replyto" required></td>
+		</tr>
+		<tr>
+			<td class="order_align">Телефон</td>
+			<td><input type="text" name="gsm"></td>
+		</tr>
+		<tr>
+			<td class="order_align">Забележка</td>
+			<td><textarea id="input_text" cols="50" rows="10" name="text" required></textarea></td>
+		</tr>
+		<tr>
 			<td></td>
+			<td><button class="order_button">Поръчай</button></td>
 		</tr>
 	</table>
 </div>
