@@ -1,15 +1,24 @@
 // The main cart controller
 myCardSiteControllers.controller('CartCtrl', function ($scope, dbFactory) {
-
-	console.log('>>>> cart ctrl initiated...');
-
 	$scope.items = {};
 
-	$scope.printAll = function () {
+	var getAll = function() {
 		var cardsDataPromise = dbFactory.getAll();
 		cardsDataPromise.$promise.then(function(d) {
 			$scope.items = d.data;
-		 });
+		});
+	};
+
+	getAll();
+
+	$scope.validateNums = function (event) {
+		if (isNaN(parseInt(event.key))) {
+			event.preventDefault();
+		}
+	};
+
+	$scope.printAll = function () {
+		getAll();
 	};
 
 	$scope.add = function (card) {

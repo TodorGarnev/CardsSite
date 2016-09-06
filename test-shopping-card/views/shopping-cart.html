@@ -29,9 +29,9 @@
 			<td>{{item.id}}</td>
 			<td>{{item.name}}</td>
 			<td>{{item.price}} лв.</td>
-			<td><input type="number" min="0"   value="{{ item.quantity }}" ng-model="test" />
+			<td><input type="text" maxlength="4" ng-keydown="validateNums($event)" ng-value="item.quantity" ng-model="quantity" />
 				<br>
-				<button class="update" ng-click="update(item.id, test)">смени</button>
+				<button class="update" ng-click="update(item.id, quantity)">смени</button>
 			</td>
 			<td ng-init="$parent.total = total + item.price * item.quantity">
 				{{item.price }} x {{ item.quantity }} = {{item.price * item.quantity }} лв.
