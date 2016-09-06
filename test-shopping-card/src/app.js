@@ -17,8 +17,16 @@ app.config(['$resourceProvider', '$routeProvider', function ($resourceProvider, 
 			templateUrl: 'views/shopping-cart.html',
 			controller: 'CartCtrl'
 		})
-		.when('/cards', {
-			templateUrl: 'views/cards.html',
+		.when('/cards_birthday', {
+			templateUrl: 'views/cards_birthday.html',
+			controller: 'CardsCtrl'
+		})
+        .when('/cards_wedding', {
+			templateUrl: 'views/cards_wedding.html',
+			controller: 'CardsCtrl'
+		})
+        .when('/cards_other', {
+			templateUrl: 'views/cards_other.html',
 			controller: 'CardsCtrl'
 		})
 		.when('/flowers', {
