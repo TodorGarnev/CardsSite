@@ -1,15 +1,16 @@
 <div id="menu">
 	<ul>
-		<li><a id="first" href="#/" ng-class="vm.navClass('{{ vm.navTitles.home }}')" ng-click="isCards = false">Начало</a></li>
-		<li id="dropdown"><a href="#/cards-birthday" ng-class="[vm.navClass('{{ vm.navTitles.cards }}'), {'active': isCards}]">Картички</a>
-			<ul>
-				<li><a href="#/cards-wedding" ng-click="isCards = true">Сватбени</a></li>
-				<li><a href="#/cards-birthday" ng-click="isCards = true">ЧРД</a></li>
-				<li><a href="#/cards-other" ng-click="isCards = true">Други</a></li>
+		<li><a id="first" href="#/" ng-class="vm.navClass('{{ vm.navTitles.home }}')" ng-click="isCards = false; isVisible = { display: 'none' }">Начало</a></li>
+		<li id="dropdown"><a href ng-class="[vm.navClass('{{ vm.navTitles.cards }}'), {'active': isCards}]"
+												 ng-click="isVisible = { display: 'block' }">Картички</a>
+			<ul ng-style="isVisible">
+				<li><a href="#/cards-wedding" ng-click="isCards = true; isVisible = { display: 'none' }">Сватбени</a></li>
+				<li><a href="#/cards-birthday" ng-click="isCards = true; isVisible = { display: 'none' }">ЧРД</a></li>
+				<li><a href="#/cards-other" ng-click="isCards = true; isVisible = { display: 'none' }">Други</a></li>
 			</ul>
 		</li>
-		<li><a id="flowers" href="#/flowers" ng-class="vm.navClass('{{ vm.navTitles.flowers }}')" ng-click="isCards = false">Цветя</a></li>
-		<li><a href="#/about" ng-class="vm.navClass('{{ vm.navTitles.about }}')" ng-click="isCards = false">За нас</a></li>
-		<li><a id="last" href="#/contacts" ng-class="vm.navClass('{{ vm.navTitles.contacts }}')" ng-click="isCards = false">Контакти</a></li>
+		<li><a id="flowers" href="#/flowers" ng-class="vm.navClass('{{ vm.navTitles.flowers }}')" ng-click="isCards = false; isVisible = { display: 'none' }">Цветя</a></li>
+		<li><a href="#/about" ng-class="vm.navClass('{{ vm.navTitles.about }}')" ng-click="isCards = false; isVisible = { display: 'none' }">За нас</a></li>
+		<li><a id="last" href="#/contacts" ng-class="vm.navClass('{{ vm.navTitles.contacts }}')" ng-click="isCards = false; isVisible = { display: 'none' }">Контакти</a></li>
 	</ul>
 </div>

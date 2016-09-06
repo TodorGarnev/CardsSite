@@ -581,7 +581,7 @@ a:hover.slidesjs-stop {
 }
 
 #dropdown:hover ul {
-    display: block;
+    /*display: block;*/
 }
 
 /*******CARDS SINGLE PAGE*******/
