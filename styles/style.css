@@ -351,6 +351,8 @@ a:hover.slidesjs-stop {
     margin-top: 10px;
     height: 20px;
     margin-bottom: -5px;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 #name a {
@@ -367,6 +369,7 @@ a:hover.slidesjs-stop {
     margin-top: -5px;
     height: 20px;
     margin-bottom: -5px;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
 #hLine2 td {
