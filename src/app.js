@@ -41,6 +41,14 @@ app.config(['$resourceProvider', '$routeProvider', function ($resourceProvider, 
 			templateUrl: 'views/contacts.html',
 			controller: 'ContactsCtrl'
 		})
+		.when('/singlecard', {
+			templateUrl: 'views/cards-single.html',
+			controller: 'SingleCardCtrl'
+		})
+		.when('/order', {
+			templateUrl: 'views/order.html',
+			controller: 'OrderCtrl'
+		})
 		.otherwise({redirectTo: '/'});
 
 }]).run([function () {
