@@ -56,9 +56,9 @@ body {
     width: 75px;
     height: auto;
     padding: 5px;
-    color: black;
+    color: white;
     text-decoration: none;
-    background-color: #56BAEC;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
 }
 
 #first {
@@ -70,13 +70,15 @@ body {
 }
 
 #menu li a:hover:not(.active) {
-    background-color: powderblue;
-    color: grey;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
+    color: white;
+    font-weight: bold;
 }
 
 #menu li a.active {
-    color: grey;
-    background-color: powderblue;
+    color: white;
+    font-weight: bold;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
 }
 
 /**** SIDE MENU ICONS ****/
@@ -294,6 +296,7 @@ a:hover.slidesjs-stop {
 
 #weekly_offers {
     margin-top: 50px;
+    font-family: 'Lobster', cursive;
 }
 
 #weekly_offers hr {
@@ -374,12 +377,16 @@ a:hover.slidesjs-stop {
 #buttons a {
     text-decoration: none;
     color: white;
+    font-size: 14px;
 }
 
 #buttons li {
     padding: 2px;
     text-decoration: none;
-    background-color: #26D0CE;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    font-family: "Times New Roman";
+    box-shadow: #B4B5B5 2px 2px 2px;
     border-radius: 10px;
     width: 90px;
     height: auto;
@@ -388,7 +395,7 @@ a:hover.slidesjs-stop {
 }
 
 #buttons li:hover {
-    background-color: #56B4D3;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
     cursor: pointer;
 }
 
@@ -404,6 +411,7 @@ a:hover.slidesjs-stop {
     text-align: left;
     font-size: 20px;
     margin-bottom: 15px;
+    font-family: 'Lobster', cursive;
 }
 
 #about p {
@@ -411,6 +419,7 @@ a:hover.slidesjs-stop {
     font-size: 16px;
     margin-left: 50px;
     margin-right: 100px;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
 #about hr {
@@ -428,6 +437,7 @@ a:hover.slidesjs-stop {
     margin: 50px 0 15px 25px;
     text-align: left;
     font-size: 20px;
+    font-family: 'Lobster', cursive;
 }
 
 #contact hr {
@@ -438,6 +448,7 @@ a:hover.slidesjs-stop {
 #contact p {
     margin-left: 50px;
     width: 450px;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
 .contact_text {
@@ -459,15 +470,19 @@ a:hover.slidesjs-stop {
 #contact form p {
     margin: 0 0 -5px 100px;
     font-size: 20px;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
 #contact_button {
-    background-color: red;
-    border-radius: 5px;
-}
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
+    box-shadow: #B4B5B5 2px 2px 2px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: white;
+ }
 
 #contact_button:hover {
-    background-color: white;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
     cursor: pointer;
 }
 
@@ -491,6 +506,7 @@ a:hover.slidesjs-stop {
     margin: 20px 0 0 25px;
     text-align: left;
     font-size: 20px;
+    font-family: 'Lobster', cursive;
 }
 
 #cards_hr {
@@ -510,6 +526,8 @@ a:hover.slidesjs-stop {
 #cards_name td {
     height: auto;
     text-align: center;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 #cards_name a {
@@ -526,17 +544,22 @@ a:hover.slidesjs-stop {
     margin-top: -5px;
     height: auto;
     text-align: center;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
 #cards_buttons a {
     text-decoration: none;
     color: white;
+    font-size: 14px;
 }
 
 #cards_buttons li {
     margin: -5px 0 50px 65px;
     text-decoration: none;
-    background-color: #26D0CE;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    font-family: "Times New Roman";
+    box-shadow: #B4B5B5 2px 2px 2px;
     width: 90px;
     height: 20px;
     padding: 0;
@@ -546,12 +569,12 @@ a:hover.slidesjs-stop {
 }
 
 #cards_buttons li:hover {
-    background-color: #56B4D3;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
     cursor: pointer;
 }
 
 .card img {
-    border: 10px solid lightpink;
+    border: 7px solid lightpink;
     width: 200px;
     height: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -584,10 +607,6 @@ a:hover.slidesjs-stop {
     height: auto;
 }
 
-#dropdown:hover ul {
-    /*display: block;*/
-}
-
 /*******CARDS SINGLE PAGE*******/
 
 #container_singlecard {
@@ -603,7 +622,8 @@ a:hover.slidesjs-stop {
 }
 
 #cards_single_line {
-
+    margin-top: 50px;
+    width: 900px;
 }
 
 #back {
@@ -611,8 +631,11 @@ a:hover.slidesjs-stop {
     text-align: center;
     text-decoration: none;
     padding: 0;
-    margin: 20px 25px 0 0;
-    background-color: #26D0CE;
+    margin: 20px 50px 0 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    font-family: "Times New Roman";
+    box-shadow: #B4B5B5 2px 2px 2px;
     width: 60px;
     height: 20px;
     list-style-type: none;
@@ -620,7 +643,7 @@ a:hover.slidesjs-stop {
 }
 
 #back:hover {
-    background-color: #56B4D3;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
     cursor: pointer;
 }
 
@@ -639,73 +662,45 @@ a:hover.slidesjs-stop {
     float: left;
 }
 
-#large_img {
-    background: url(../img/card.jpg) no-repeat;
-    background-size: cover;
+#large_img img {
     width: 400px;
     height: 500px;
-    border: 1px solid black;
-    padding: 1px;
-    margin-bottom: 10px;
+    border: 5px solid #ffe1e6;
 }
 
-#large_img a {
-    width: 400px;
-    height: 500px;
-    display: block;
+#large_img img:hover {
+    border: 5px solid lightpink;
 }
 
-#small_img1 {
-    margin-left: 4px;
-    background: url(../img/2.jpg) no-repeat;
-    background-size: cover;
+
+#small_img1 img {
+    margin-top: 10px;
+    margin-left: 70px;
     width: 123px;
     height: 123px;
-    border: 1px solid black;
+    border: 5px solid #ffe1e6;
     display: inline;
     float: left;
 }
 
-#small_img1 a {
-    display: block;
-    width: 123px;
-    height: 123px;
-
+#small_img1 img:hover {
+    border: 5px solid lightpink;
 }
 
-#small_img2 {
+#small_img2 img {
+    margin-top: 10px;
     margin-left: 10px;
-    background: url(../img/3.jpg) no-repeat;
-    background-size: cover;
     width: 123px;
     height: 123px;
-    border: 1px solid black;
+    border: 5px solid #ffe1e6;
     display: inline;
     float: left;
 }
 
-#small_img2 a {
-    display: block;
-    width: 123px;
-    height: 123px;
+#small_img2 img:hover {
+    border: 5px solid lightpink;
 }
 
-#small_img3 {
-    margin-left: 10px;
-    background: url(../img/4.png) no-repeat;
-    background-size: cover;
-    width: 123px;
-    height: 123px;
-    border: 1px solid black;
-    display: inline;
-    float: left;
-}
-
-#small_img3 a {
-    display: block;
-    width: 123px;
-    height: 123px;
-}
 
 #card_name {
     margin-top: 100px;
@@ -759,21 +754,26 @@ a:hover.slidesjs-stop {
     text-decoration: none;
     padding: 0;
     margin: -27px 25px 0 850px;
-    background-color: #26D0CE;
-    width: 65px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    font-family: "Times New Roman";
+    box-shadow: #B4B5B5 2px 2px 2px;
+    width: 80px;
     height: 20px;
     list-style-type: none;
     border-radius: 20px;
+    border: 1px solid lightpink;
 }
 
 #add:hover {
-    background-color: #56B4D3;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
     cursor: pointer;
 }
 
 #add a {
     text-decoration: none;
     color: white;
+    font-size: 15px;
 }
 
 #container_singlecard input {
@@ -799,44 +799,81 @@ a:hover.slidesjs-stop {
     border: 1px solid lightpink;
     padding: 5px;
     text-align: center;
-    
+    padding: 10px;
 }
 
 #cart_table {
-    margin-left: 100px;
+    margin-left: 200px;
     border-collapse: collapse;
 }
 
 
 #cart_table th {
-    background-color: lightpink;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
     color: white;    
 }
 
-.update, .delete, .order_button {
-    padding: 2px;
-    background-color: lightpink;
+#cart_table input {
+    width: 45px;
+    height: auto;
+    padding: 5px;
+    font-weight: bold;
+    background-image: url(../img/shadow.jpg);
+}
+
+#cart_table input:active {
+    border-color: 3px solid blue;
+}
+
+.delete, .order_button {
+    margin-top: 5px;
+    padding: 3px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
+    box-shadow: #B4B5B5 2px 2px 2px;
     border-radius: 5px;
     height: auto;
     cursor: pointer;
+    color: white;
 }
+
+.delete:hover, .order_button:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
+}
+
+.update {
+    margin-top: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
 #DeleteCart {
-    margin-left: 100px;
+    margin-left: 200px;
     font-weight: bold;
     font-size: 14px;
     cursor: pointer;
+    margin-bottom: 100px;
+ }
+
+#DeleteCart:hover {
+    opacity: 0.5;
+}
+
+#total {
+    font-weight: bold;
 }
 
 #order {
     margin-left: 350px;
     margin-bottom: 0;
     font-size: 27px;
+    font-family: 'Lobster', cursive;
 }
 
 .order_align {
     font-size: 15px;
     text-align: right;
     padding-top: 0;
+    vertical-align: inherit;
 }
 
 #order_hr {

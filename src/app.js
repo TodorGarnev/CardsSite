@@ -42,7 +42,7 @@ app.config(['$resourceProvider', '$routeProvider', function ($resourceProvider, 
 			controller: 'ContactsCtrl'
 		})
 		.when('/singlecard', {
-			templateUrl: 'views/cards-single.html',
+			templateUrl: 'views/single-card.html',
 			controller: 'SingleCardCtrl'
 		})
 		.when('/order', {

@@ -20,7 +20,6 @@
 		<tr>
 			<th>№</th>
 			<th>Артикул</th>
-			<th>Цена</th>
 			<th>Брой</th>
 			<th>Цена</th>
 			<th></th>
@@ -28,10 +27,9 @@
 		<tr ng:repeat="item in items">
 			<td>{{item.id}}</td>
 			<td>{{item.name}}</td>
-			<td>{{item.price}} лв.</td>
 			<td><input type="text" maxlength="4" ng-keydown="validateNums($event)" ng-value="item.quantity" ng-model="quantity" />
 				<br>
-				<button class="update" ng-click="update(item.id, quantity)">смени</button>
+				<div class="update"ng-click="update(item.id, quantity)">[смени]</div>
 			</td>
 			<td ng-init="$parent.total = total + item.price * item.quantity">
 				{{item.price }} x {{ item.quantity }} = {{item.price * item.quantity }} лв.
@@ -42,10 +40,9 @@
 			<td></td>
 			<td></td>
 			<td></td>
+			<td id="total">Общо: {{ total }} лв.</td>
 			<td></td>
-			<td>Общо: {{ total }} лв.</td>
-			<td></td>
-			</tr>
+		</tr>
 	</table>
 	<br>
 	<div id="DeleteCart" ng-click="">[ Изпразни кошницата ]</div>
