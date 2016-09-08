@@ -22,7 +22,7 @@ body {
     border-radius: 3px;
     padding: 10px;
     width: 1000px;
-    height: 660px;
+    height: 750px;
     background-color: whitesmoke;
     background-size: contain;
     background-position: center;
@@ -149,9 +149,9 @@ body {
 /**** SLIDER ****/
 
 .slider {
-    width: 800px;
+        width: 800px;
     height: 300px;
-    margin: auto auto auto 100px;
+    margin: 25px auto auto 100px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -286,7 +286,7 @@ a:hover.slidesjs-stop {
 
 #copyright {
     text-align: right;
-    margin-top: 25px;
+    margin-top: 5px;
     margin-right: 450px;
     font-size: 13px;
     opacity: 0.5;
@@ -311,100 +311,83 @@ a:hover.slidesjs-stop {
 
 #weekly_offers table {
     margin-left: 50px;
-    width: 100%;
+    margin-top: 30px;
 }
 
-#weekly_offers td {
-    display: block;
-    float: left;
-    width: 130px;
-    height: 130px;
-    margin-left: 75px;
-    text-align: center;
+
+.home-img img {
+    margin-bottom: 10px;
+    border: 3px solid #ffe1e6;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#offer1 img {
-    border: 1px solid grey;
-    width: 130px;
-    height: 130px;
+.home-img img:hover {
+    border: 3px solid lightpink;
 }
 
-#offer2 img {
-    border: 1px solid grey;
-    width: 130px;
-    height: 130px;
+.home-card {
+    padding-left: 50px;
 }
 
-#offer3 img {
-    border: 1px solid grey;
-    width: 130px;
-    height: 130px;
-}
 
-#offer4 img {
-    border: 1px solid grey;
-    width: 130px;
-    height: 130px;
-}
-
-#name td {
-    margin-top: 10px;
-    height: 20px;
-    margin-bottom: -5px;
-    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+.home-name1 a{
+    text-decoration: none;
+    padding-left: 45px;
     font-weight: bold;
-}
-
-#name a {
-    text-decoration: none;
     color: black;
+    font-size: 17px;
 }
 
-#hLine td {
-    margin-top: -5px;
-    height: 20px;
-}
-
-#price td {
-    margin-top: -5px;
-    height: 20px;
-    margin-bottom: -5px;
-    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
-}
-
-#hLine2 td {
-    margin-top: -5px;
-    height: 20px;
-}
-
-#buttons a {
+.home-name2 a{
     text-decoration: none;
-    color: white;
-    font-size: 14px;
+    padding-left: 25px;
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
 }
 
-#buttons li {
-    padding: 2px;
+.home-name3 a{
+    text-decoration: none;
+    padding-left: 25px;
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
+}
+
+.home-name4 a{
+    text-decoration: none;
+    padding-left: 17px;
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
+}
+
+.home-price {
+    padding-left: 45px ;
+    color: black;
+    font-size: 17px;
+}
+
+.home-add-button a {
+    display: block;
+    width: 90px;
+    text-align: center;
     text-decoration: none;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
-    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
-    font-family: "Times New Roman";
     box-shadow: #B4B5B5 2px 2px 2px;
-    border-radius: 10px;
-    width: 90px;
-    height: auto;
-    list-style-type: none;
-    margin-left: 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: white;
+    margin-left: 35px;
 }
 
-#buttons li:hover {
+.home-add-button a:hover {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
     cursor: pointer;
 }
 
-#buttons td {
-    height: auto;
-}
 
 /*******ABOUT*******/
 
@@ -621,7 +604,7 @@ a:hover.slidesjs-stop {
     border-radius: 3px;
     padding: 10px;
     width: 1000px;
-    height: 750px;
+    height: 650px;
     background-color: whitesmoke;
     background-size: contain;
     background-position: center;
@@ -671,7 +654,7 @@ a:hover.slidesjs-stop {
 
 #large_img img {
     width: 400px;
-    height: 500px;
+    height: 400px;
     border: 5px solid #ffe1e6;
 }
 
@@ -741,7 +724,7 @@ a:hover.slidesjs-stop {
 }
 
 #container_singlecard input {
-    width: 50px;
+    width: 60px;
     font-size: 15px;
     height: 30px;
     line-height: 30px;
@@ -826,10 +809,6 @@ a:hover.slidesjs-stop {
     padding: 5px;
     font-weight: bold;
     background-image: url(../img/shadow.jpg);
-}
-
-#cart_table input:active {
-    border: 3px solid blue;
 }
 
 .delete, .order_button {

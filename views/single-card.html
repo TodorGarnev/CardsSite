@@ -3,13 +3,13 @@
      <hr id="cards_single_line">
      <div id="gallery">
          <div id="large_img">
-					 <a href="../img/cards/birthday/{{ imgId }}.jpg" data-lightbox="card1"><img src="/img/cards/birthday/{{ imgId }}.jpg" /></a>
+					 <a href="../img/cards/{{ imgId }}.jpg" data-lightbox="card1"><img src="/img/cards/{{ imgId }}.jpg" /></a>
 				 </div>
          <div id="small_img1">
-					 <a href="../img/cards/birthday/{{ imgId }}_1.jpg" data-lightbox="card1"><img src="/img/cards/birthday/{{ imgId }}_1.jpg" /></a>
+					 <a href="../img/cards/{{ imgId }}_1.jpg" data-lightbox="card1"><img src="/img/cards/{{ imgId }}_1.jpg" /></a>
 				 </div>
          <div id="small_img2">
-					 <a href="../img/cards/birthday/{{ imgId }}_2.jpg" data-lightbox="card1"><img src="/img/cards/birthday/{{ imgId }}_2.jpg" /></a>
+					 <a href="../img/cards/{{ imgId }}_2.jpg" data-lightbox="card1"><img src="/img/cards/{{ imgId }}_2.jpg" /></a>
 				 </div>
      </div>
 	 		<div id="card-info">
@@ -18,8 +18,8 @@
 			 <p id="buy_header">Добави в кошницата:</p>
 			 <hr id="buy_line">
 			 <div>
-					 <span id="input_count">бр.:</span><input  type="text" name="count" ng-init="quantity=1" ng-model="quantity" maxlength="3" />
-					 <span id="input_price">цена:</span><input  type="text" name="price" value="{{ price }}" readonly /> лв.
+					 <span id="input_count">бр.:</span><input  type="text" name="count" ng-init="quantity=1" ng-model="quantity" maxlength="4" />
+					 <span id="input_price">цена:</span><input  type="text" name="price" value="{{ price }} " readonly /> лв.
 					 <li id="add"><a href ng-click="addCard()">добави</a></li>
 			 </div>
 		</div>
