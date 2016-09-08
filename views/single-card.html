@@ -3,25 +3,24 @@
      <hr id="cards_single_line">
      <div id="gallery">
          <div id="large_img">
-					 <a href="../img/cards/birthday/1.jpg" data-lightbox="card1"><img src="/img/cards/birthday/1.jpg" /></a>
+					 <a href="../img/cards/birthday/{{ imgId }}.jpg" data-lightbox="card1"><img src="/img/cards/birthday/{{ imgId }}.jpg" /></a>
 				 </div>
          <div id="small_img1">
-					 <a href="../img/cards/birthday/1_1.jpg" data-lightbox="card1"><img src="/img/cards/birthday/1_1.jpg" /></a>
+					 <a href="../img/cards/birthday/{{ imgId }}_1.jpg" data-lightbox="card1"><img src="/img/cards/birthday/{{ imgId }}_1.jpg" /></a>
 				 </div>
          <div id="small_img2">
-					 <a href="../img/cards/birthday/1_2.jpg" data-lightbox="card1"><img src="/img/cards/birthday/1_2.jpg" /></a>
+					 <a href="../img/cards/birthday/{{ imgId }}_2.jpg" data-lightbox="card1"><img src="/img/cards/birthday/{{ imgId }}_2.jpg" /></a>
 				 </div>
      </div>
 	 		<div id="card-info">
-			 <p id="card_name">Тук трябва да стои името на картичката</p>
-			 <p id="card_price">Цена: <span id="price_bold">4.99</span> лв.</p>
+			 <p id="card_name">{{ name }}</p>
+			 <p id="card_price">Цена: <span id="price_bold">{{ price }}</span> лв.</p>
 			 <p id="buy_header">Добави в кошницата:</p>
 			 <hr id="buy_line">
-     <div>
-         <span id="input_count">бр.:</span> <input  type="text" name="count" value="1" maxlength="3">
-         <span id="input_price">цена:</span> <input  type="text" name="price" value="4.99" readonly> лв.
-         <li id="add"><a href="cards.html">добави</a></li>
-     </div>
-</div>
-
-               
+			 <div>
+					 <span id="input_count">бр.:</span><input  type="text" name="count" ng-init="quantity=1" ng-model="quantity" maxlength="3" />
+					 <span id="input_price">цена:</span><input  type="text" name="price" value="{{ price }}" readonly /> лв.
+					 <li id="add"><a href ng-click="addCard()">добави</a></li>
+			 </div>
+		</div>
+ </div>
