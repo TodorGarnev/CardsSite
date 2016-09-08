@@ -1,4 +1,3 @@
-myCardSiteControllers.controller('ContactsCtrl', function ($scope) {
-
-	console.log('>>>> Contacts controller initiated');
+myCardSiteControllers.controller('ContactsCtrl', function (sliderFactory) {
+	sliderFactory.showSlider();
 });

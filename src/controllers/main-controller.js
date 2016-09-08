@@ -1,4 +1,3 @@
-myCardSiteControllers.controller('MainCtrl', function ($scope) {
-
-	console.log('>>>> main controller initiated');
+myCardSiteControllers.controller('MainCtrl', function (sliderFactory) {
+	sliderFactory.showSlider();
 });
