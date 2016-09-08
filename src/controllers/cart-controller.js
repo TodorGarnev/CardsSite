@@ -17,10 +17,6 @@ myCardSiteControllers.controller('CartCtrl', function ($scope, dbFactory) {
 		}
 	};
 
-	$scope.printAll = function () {
-		getAll();
-	};
-
 	$scope.add = function (card) {
 		dbFactory.add(card);
 		console.log('Added clicked');
@@ -35,4 +31,9 @@ myCardSiteControllers.controller('CartCtrl', function ($scope, dbFactory) {
 		dbFactory.deleteCard(id);
 		console.log('>>> Deleted clicked with id: ', id);
 	};
+
+	$scope.deleteAll = function () {
+		dbFactory.deleteAll();
+		getAll();
+	}
 });

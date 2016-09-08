@@ -77,7 +77,7 @@ router.post('/add', function(req, res) {
 	}
 });
 
-//DELETE request to /del
+//DELETE request to /del/:id
 router.delete('/del/:id', function(req, res) {
 	console.log('>>> id:', req.params.id);
 	if (req.params.id) {
@@ -87,6 +87,15 @@ router.delete('/del/:id', function(req, res) {
 			//console.log('Deleted rows: ', res.complete);
 		});
 	}
+});
+
+//DELETE request to /del
+router.delete('/del', function(req, res) {
+	con.query('DELETE FROM cards', function (err, result) {
+		if (err) throw err;
+
+		console.log('Deleted all rows');
+	});
 });
 
 // Return router

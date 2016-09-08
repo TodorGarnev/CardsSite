@@ -1,22 +1,8 @@
 <div class="container_cart" ng-controller="CartCtrl">
 	<div id="cards_title">Кошница</div>
 	<hr id="cards_hr">
-
-	<!-- Name: <input type="text" ng-model="card.name">
-	<br>
-	<br>
-	Price: <input type="number" min="0" ng-model="card.price">
-	<br>
-	<br>
-	Quantity: <input type="number" min="0" ng-model="card.quantity">
-	<br>
-	<br> -->
-
-	<button class="print" ng-click="printAll()">PRINT</button> <!-- printing DB data (all cards in the cart) -->
-
-	<!-- <button class="add" ng-click="add({name: card.name, price: card.price, quantity: card.quantity})">ADD</button> -->
-
-	<table id="cart_table">
+	<div class="empty-cart-msg" ng-if="items.length == 0">The cart is empty.</div>
+	<table id="cart_table" ng-if="items.length > 0">
 		<tr>
 			<th>№</th>
 			<th>Артикул</th>
@@ -45,7 +31,7 @@
 		</tr>
 	</table>
 	<br>
-	<div id="DeleteCart" ng-click="">[ Изпразни кошницата ]</div>
+	<div id="DeleteCart" ng-click="deleteAll()">[ Изпразни кошницата ]</div>
 	<p id="order">Поръчка</p>
 	<hr id="order_hr">
 	<table id="order_table">

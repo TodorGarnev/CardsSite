@@ -18,7 +18,6 @@ angular.module('myCardSiteFactories').factory('dbFactory', function($resource) {
 			});
 
 		AddCard.charge(card);
-		console.log('Added from factory');
 	};
 
 	var update = function (id, quantity) {
@@ -30,7 +29,6 @@ angular.module('myCardSiteFactories').factory('dbFactory', function($resource) {
 		});
 
 		UpdateCard.charge({id: id, quantity: quantity});
-		console.log('Updated from factory');
 	};
 
 	var deleteCard= function (id) {
@@ -42,13 +40,24 @@ angular.module('myCardSiteFactories').factory('dbFactory', function($resource) {
 		});
 
 		DelCard.charge({id: id});
-		console.log('>>> Deleted from factory with id: ', id);
+	};
+
+	var deleteAll = function () {
+		var DelAll = $resource('/del', {}, {
+			charge: {
+				method: 'DELETE',
+				params: {charge: true}
+			}
+		});
+
+		DelAll.charge();
 	};
 
 	return {
 		getAll: getAll,
 		add: add,
 		update: update,
-		deleteCard: deleteCard
+		deleteCard: deleteCard,
+		deleteAll: deleteAll
 	};
 });
