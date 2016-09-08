@@ -436,7 +436,11 @@ a:hover.slidesjs-stop {
 
 /*******CONTACT*******/
 
-#contact div {
+#contact {
+    margin-top: 25px;
+}
+
+.contact-info div {
     margin: 50px 0 15px 25px;
     text-align: left;
     font-size: 20px;
@@ -448,7 +452,7 @@ a:hover.slidesjs-stop {
     opacity: 0.3;
 }
 
-#contact p {
+.contact-info p {
     margin-left: 50px;
     width: 450px;
     font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -458,7 +462,7 @@ a:hover.slidesjs-stop {
     font-weight: bold;
 }
 
-#contact form {
+.contact-form form {
     display: block;
     margin-left: 650px;
     margin-top: -170px;
@@ -825,7 +829,7 @@ a:hover.slidesjs-stop {
 }
 
 #cart_table input:active {
-    border-color: 3px solid blue;
+    border: 3px solid blue;
 }
 
 .delete, .order_button {
@@ -906,6 +910,7 @@ a:hover.slidesjs-stop {
 #contact form td textarea {
     background-image: url(../img/shadow.jpg);
     border: 1px solid gray;
+}
 
 
 
