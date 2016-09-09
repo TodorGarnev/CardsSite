@@ -29,7 +29,8 @@ myCardSiteControllers.controller('CartCtrl', function ($rootScope, $scope, dbFac
 
 	$scope.delete = function (id) {
 		dbFactory.deleteCard(id);
-		console.log('>>> Deleted clicked with id: ', id);
+		getAll();
+		$rootScope.$broadcast(Events.UPDATE);
 	};
 
 	$scope.deleteAll = function () {
