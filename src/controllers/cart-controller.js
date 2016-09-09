@@ -37,5 +37,11 @@ myCardSiteControllers.controller('CartCtrl', function ($rootScope, $scope, dbFac
 		dbFactory.deleteAll();
 		getAll();
 		$rootScope.$broadcast(Events.UPDATE);
-	}
+	};
+
+	$scope.order = function () {
+		dbFactory.deleteAll();
+		getAll();
+		$rootScope.$broadcast(Events.UPDATE);
+	};
 });
