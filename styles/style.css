@@ -836,8 +836,12 @@ a:hover.slidesjs-stop {
     color: white;
 }
 
-.delete:hover, .order_button:hover {
+.delete:hover, .order_button:hover:not(.disabled) {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
+}
+
+.disabled {
+    opacity: .3;
 }
 
 .update {

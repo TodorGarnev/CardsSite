@@ -34,34 +34,39 @@
 	<div id="DeleteCart" ng-click="deleteAll()">[ Изпразни кошницата ]</div>
 	<p id="order">Поръчка</p>
 	<hr id="order_hr">
-	<table id="order_table">
-		<tr>
-			<td class="order_align">Име</td>
-			<td><input type="text" name="name" required></td>
-		</tr>
-		<tr>
-			<td class="order_align">Фамилия</td>
-			<td><input type="text" name="name" required></td>
-		</tr>
-		<tr>
-			<td class="order_align">Адрес</td>
-			<td><textarea id="input_text" cols="50" rows="10" name="text" required></textarea></td>
-		</tr>
-		<tr>
-			<td class="order_align">Email</td>
-			<td><input type="email" name="_replyto" required></td>
-		</tr>
-		<tr>
-			<td class="order_align">Телефон</td>
-			<td><input type="text" name="gsm"></td>
-		</tr>
-		<tr>
-			<td class="order_align">Забележка</td>
-			<td><textarea id="input_text" cols="50" rows="10" name="text" required></textarea></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><button class="order_button" ng-click="order()">Поръчай</button></td>
-		</tr>
-	</table>
+	<form name="orderForm">
+		<table id="order_table">
+			<tr>
+				<td class="order_align">Име</td>
+				<td><input type="text" name="name" ng-required="true" ng-model="name"></td>
+			</tr>
+			<tr>
+				<td class="order_align">Фамилия</td>
+				<td><input type="text" name="family" ng-required="true" ng-model="family"></td>
+			</tr>
+			<tr>
+				<td class="order_align">Адрес</td>
+				<td><textarea id="input_text" cols="50" rows="10" name="text" ng-model="text" ng-required="true"></textarea></td>
+			</tr>
+			<tr>
+				<td class="order_align">Email</td>
+				<td><input type="email" name="_replyto" ng-required="true" ng-model="email"></td>
+			</tr>
+			<tr>
+				<td class="order_align">Телефон</td>
+				<td><input type="text" name="gsm"></td>
+			</tr>
+			<tr>
+				<td class="order_align">Забележка</td>
+				<td><textarea id="input_text" cols="50" rows="10" name="text" ng-model="note" ng-required="true"></textarea></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button class="order_button"
+										ng-class="{'disabled': orderForm.$invalid}"
+										ng-disabled="orderForm.$invalid"
+										ng-click="order()">Поръчай</button></td>
+			</tr>
+		</table>
+	</form>
 </div>
