@@ -6,8 +6,13 @@ myCardSiteControllers.controller('CartCtrl', function ($rootScope, $scope, dbFac
 		var cardsDataPromise = dbFactory.getAll();
 		cardsDataPromise.$promise.then(function(d) {
 			$scope.items = d.data;
+			$scope.total = 0;
+			angular.forEach($scope.items, function (item) {
+				$scope.total += item.price * item.quantity;
+			});
 		});
 	};
+
 
 	getAll();
 
@@ -19,12 +24,11 @@ myCardSiteControllers.controller('CartCtrl', function ($rootScope, $scope, dbFac
 
 	$scope.add = function (card) {
 		dbFactory.add(card);
-		console.log('Added clicked');
 	};
 
 	$scope.update = function (id, quantity) {
 		dbFactory.update(id, quantity);
-		console.log('Updated clicked');
+		getAll();
 	};
 
 	$scope.delete = function (id) {
