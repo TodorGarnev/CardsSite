@@ -1,5 +1,5 @@
 // The main cart controller
-myCardSiteControllers.controller('CartCtrl', function ($scope, dbFactory) {
+myCardSiteControllers.controller('CartCtrl', function ($rootScope, $scope, dbFactory, Events) {
 	$scope.items = {};
 
 	var getAll = function() {
@@ -35,5 +35,6 @@ myCardSiteControllers.controller('CartCtrl', function ($scope, dbFactory) {
 	$scope.deleteAll = function () {
 		dbFactory.deleteAll();
 		getAll();
+		$rootScope.$broadcast(Events.UPDATE);
 	}
 });

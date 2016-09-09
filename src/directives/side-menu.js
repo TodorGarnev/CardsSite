@@ -1,16 +1,28 @@
 myCardSiteControllers.controller('SideMenuCtrl',
-	function (dbFactory) {
+	function ($rootScope, dbFactory, Events) {
 		var vm = this;
 
-		vm.data = dbFactory.getAll().$promise.then(function (res) {
-			return res.data;
+		vm.cardsData = [];
+
+		vm.getData = function () {
+			return dbFactory.getAll().$promise.then(function (res) {
+				return res.data;
+			});
+		};
+
+		$rootScope.$on(Events.UPDATE, function () {
+			 vm.getData().then(function (res) {
+				 vm.cardsData = res;
+			});
 		});
+
+		vm.getData();
 	})
 	.directive('sideMenu', function () {
 		return {
 			link: function postLink(scope, element, attrs, controller) {
-				controller.data.then(function(res) {
-					scope.cardsData = res;
+				controller.getData().then(function(res) {
+					controller.cardsData = res;
 				});
 			},
 			controller: 'SideMenuCtrl',
