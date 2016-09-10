@@ -1,25 +1,25 @@
- <div id="container_singlecard">
+ <div id="container-singlecard">
      <li id="back"><a href ng-click="back()">назад</a></li>
-     <hr id="cards_single_line">
+     <hr id="cards-single-line">
      <div id="gallery">
-         <div id="large_img">
+         <div id="large-img">
 					 <a href="../img/cards/{{ imgId }}.jpg" data-lightbox="card1"><img src="/img/cards/{{ imgId }}.jpg" /></a>
 				 </div>
-         <div id="small_img1">
+         <div id="small-img1">
 					 <a href="../img/cards/{{ imgId }}_1.jpg" data-lightbox="card1"><img src="/img/cards/{{ imgId }}_1.jpg" /></a>
 				 </div>
-         <div id="small_img2">
+         <div id="small-img2">
 					 <a href="../img/cards/{{ imgId }}_2.jpg" data-lightbox="card1"><img src="/img/cards/{{ imgId }}_2.jpg" /></a>
 				 </div>
      </div>
 	 		<div id="card-info">
-			 <p id="card_name">{{ name }}</p>
-			 <p id="card_price">Цена: <span id="price_bold">{{ price }}</span> лв.</p>
-			 <p id="buy_header">Добави в кошницата:</p>
-			 <hr id="buy_line">
+			 <p id="card-name">{{ name }}</p>
+			 <p id="card-price">Цена: <span id="price-bold">{{ price }}</span> лв.</p>
+			 <p id="buy-header">Добави в кошницата:</p>
+			 <hr id="buy-line">
 			 <div>
-					 <span id="input_count">бр.:</span><input  type="text" name="count" ng-init="quantity=1" ng-model="quantity" maxlength="4" />
-					 <span id="input_price">цена:</span><input  type="text" name="price" value="{{ price }} " readonly /> лв.
+					 <span id="input-count">бр.:</span><input  type="text" name="count" ng-init="quantity=1" ng-model="quantity" maxlength="4" />
+					 <span id="input-price">цена:</span><input  type="text" name="price" value="{{ price }} " readonly /> лв.
 					 <li id="add"><a href ng-click="addCard()">добави</a></li>
 			 </div>
 		</div>

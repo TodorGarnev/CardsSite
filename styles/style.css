@@ -2,6 +2,7 @@
 
 body {
     background: url(../img/background.jpg) repeat;
+    background-color: fcd0c5;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 
@@ -244,7 +245,7 @@ a:hover.slidesjs-stop {
     width: 13px;
     height: 0;
     padding-top: 13px;
-    background: url(../img/img_slider/pagination.png) 0 0;
+    background: url(../img/img-slider/pagination.png) 0 0;
     float: left;
     overflow: hidden;
 }
@@ -301,7 +302,7 @@ a:hover.slidesjs-stop {
 
 #copyright {
     text-align: right;
-    margin-top: 5px;
+    margin-top: -10px;
     margin-right: 450px;
     font-size: 13px;
     opacity: 0.5;
@@ -309,22 +310,22 @@ a:hover.slidesjs-stop {
 
 /**** WEEKLY OFFERS ****/
 
-#weekly_offers {
+#weekly-offers {
     margin-top: 50px;
-    font-family: 'Lobster', cursive;
 }
 
-#weekly_offers hr {
+#weekly-offers hr {
     opacity: 0.3;
 }
 
-#weekly_offers p {
+#weekly-offers p {
     margin: auto auto 15px 25px;
     text-align: left;
     font-size: 20px;
+    font-family: 'Lobster', cursive;
 }
 
-#weekly_offers table {
+#weekly-offers table {
     margin-left: 50px;
     margin-top: 30px;
 }
@@ -432,17 +433,31 @@ a:hover.slidesjs-stop {
     font-weight: bold;
 }
 
+/*******ORDER*******/
+
+#container-order {
+    margin: auto;
+    border-radius: 3px;
+    padding: 10px;
+    width: 1000px;
+    height: 550px;
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 /*******CONTACT*******/
 
 #contact {
     margin-top: 25px;
+    font-family: 'Lobster', cursive;
 }
 
 .contact-info div {
     margin: 50px 0 15px 25px;
     text-align: left;
     font-size: 20px;
-    font-family: 'Lobster', cursive;
 }
 
 #contact hr {
@@ -456,7 +471,7 @@ a:hover.slidesjs-stop {
     font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
-.contact_text {
+.contact-text {
     font-weight: bold;
 }
 
@@ -478,7 +493,7 @@ a:hover.slidesjs-stop {
     font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
-#contact_button {
+#contact-button {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
     box-shadow: #B4B5B5 2px 2px 2px;
     border-radius: 50px;
@@ -486,7 +501,7 @@ a:hover.slidesjs-stop {
     color: white;
  }
 
-#contact_button:hover {
+#contact-button:hover {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
     cursor: pointer;
 }
@@ -507,95 +522,100 @@ a:hover.slidesjs-stop {
 
 /*******CARDS*******/
 
-#cards_title {
+#container-cards {
+    margin: auto;
+    border-radius: 3px;
+    padding: 10px;
+    width: 1000px;
+    height: 750px;
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#cards-title {
     margin: 20px 0 0 25px;
     text-align: left;
     font-size: 20px;
     font-family: 'Lobster', cursive;
 }
 
-#cards_hr {
+#cards-hr {
     margin-bottom: 20px;
     opacity: 0.3;
 }
 
 #cards {
-    margin-left: -10px;
-    margin-top: 25px;
+    margin-left: -20px;
 }
 
-#cards td {
-    padding-left: 25px;
-}
-
-#cards_name td {
-    height: auto;
-    text-align: center;
-    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-#cards_name a {
-    text-decoration: none;
-    color: black;
-}
-
-.cards_hLine td {
-    height: auto;
+#cards hr {
     opacity: 0.3;
 }
 
-#cards_price td {
-    margin-top: -5px;
-    height: auto;
-    text-align: center;
-    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+.card {
+    padding-left: 50px;
 }
 
-#cards_buttons a {
+.card-image img {
+    margin-bottom: 10px;
+    border: 7px solid #ffe1e6;
+    width: 180px;
+    height: 180px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px;
+}
+
+.card-image img:hover {
+    border: 7px solid lightpink;
+}
+
+.card-name a {
     text-decoration: none;
-    color: white;
-    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
 }
 
-#cards_buttons li {
-    margin: -5px 0 50px 65px;
+.card-name {
+    text-align: center;
+}
+
+.card-price {
+    text-align: center;
+}
+
+.card-add-button {
+    text-align: center;
+}
+
+.card-add-button a {
+    display: block;
+    width: 90px;
+    text-align: center;
     text-decoration: none;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
-    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
-    font-family: "Times New Roman";
     box-shadow: #B4B5B5 2px 2px 2px;
-    width: 90px;
-    height: 20px;
-    padding: 0;
-    list-style-type: none;
-    text-align: center;
-    border-radius: 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: white;
+    margin-left: 50px;
+    margin-bottom: 20px;
 }
 
-#cards_buttons li:hover {
+.card-add-button a:hover {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
     cursor: pointer;
 }
 
-.card img {
-    border: 7px solid lightpink;
-    width: 200px;
-    height: 200px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+#flowers hr {
+    opacity: 0.3;
 }
 
-#container_cards {
-    margin: auto;
-    border-radius: 3px;
-    padding: 10px;
-    width: 1000px;
-    height: auto;
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+#flowers td {
+    padding: 40 10 0 37;
 }
 
 /*******CARDS DROPDOWN*******/
@@ -614,7 +634,7 @@ a:hover.slidesjs-stop {
 
 /*******CARDS SINGLE PAGE*******/
 
-#container_singlecard {
+#container-singlecard {
     margin: auto;
     border-radius: 3px;
     padding: 10px;
@@ -626,7 +646,7 @@ a:hover.slidesjs-stop {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#cards_single_line {
+#cards-single-line {
     margin-top: 50px;
     width: 900px;
 }
@@ -657,7 +677,7 @@ a:hover.slidesjs-stop {
     color: white;
 }
 
-#cards_single_line {
+#cards-single-line {
     opacity: 0.3;
 }
 
@@ -667,18 +687,18 @@ a:hover.slidesjs-stop {
     float: left;
 }
 
-#large_img img {
+#large-img img {
     width: 400px;
     height: 400px;
     border: 5px solid #ffe1e6;
 }
 
-#large_img img:hover {
+#large-img img:hover {
     border: 5px solid lightpink;
 }
 
 
-#small_img1 img {
+#small-img1 img {
     margin-top: 10px;
     margin-left: 70px;
     width: 123px;
@@ -688,11 +708,11 @@ a:hover.slidesjs-stop {
     float: left;
 }
 
-#small_img1 img:hover {
+#small-img1 img:hover {
     border: 5px solid lightpink;
 }
 
-#small_img2 img {
+#small-img2 img {
     margin-top: 10px;
     margin-left: 10px;
     width: 123px;
@@ -702,43 +722,40 @@ a:hover.slidesjs-stop {
     float: left;
 }
 
-#small_img2 img:hover {
+#small-img2 img:hover {
     border: 5px solid lightpink;
 }
 
 
-#card_name {
+#card-name {
     margin-top: 100px;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
+    font-family: 'Lobster', cursive;
 }
 
-#card_description {
-    font-size: 20px;
-}
-
-#card_price {
+#card-price {
     display: inline;
     margin-left: 350px;
     font-size: 15px;
     font-weight: bold;
 }
 
-#card_price span {
+#card-price span {
     font-size: 20px;
 }
 
-#buy_header {
+#buy-header {
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-#buy_line {
+#buy-line {
     opacity: 0.5;
     margin-bottom: 20px;
 }
 
-#container_singlecard input {
+#container-singlecard input {
     width: 60px;
     font-size: 15px;
     height: 30px;
@@ -746,11 +763,11 @@ a:hover.slidesjs-stop {
     padding-left: 7px;
 }
 
-#input_price {
+#input-price {
     margin-left: 25px;
 }
 
-#input_count {
+#input-count {
     margin-left: 100px;
 }
 
@@ -781,14 +798,14 @@ a:hover.slidesjs-stop {
     font-size: 15px;
 }
 
-#container_singlecard input {
+#container-singlecard input {
     background-image: url(../img/shadow.jpg);
     border: 1px solid gray;
 }
 
 /*******SHOPPING CART*******/
 
-.container_cart {
+.container-cart {
     margin: auto;
     border-radius: 3px;
     padding: 10px;
@@ -800,25 +817,30 @@ a:hover.slidesjs-stop {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#cart_table td, th {
+.empty-cart-msg {
+    font-size: 17px;
+    text-align: center;
+}
+
+#cart-table td, th {
     border: 1px solid lightpink;
     padding: 5px;
     text-align: center;
     padding: 10px;
 }
 
-#cart_table {
+#cart-table {
     margin-left: 200px;
     border-collapse: collapse;
 }
 
 
-#cart_table th {
+#cart-table th {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
     color: white;    
 }
 
-#cart_table input {
+#cart-table input {
     width: 45px;
     height: auto;
     padding: 5px;
@@ -826,7 +848,7 @@ a:hover.slidesjs-stop {
     background-image: url(../img/shadow.jpg);
 }
 
-.delete, .order_button {
+.delete, .order-button {
     margin-top: 5px;
     padding: 3px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
@@ -837,7 +859,7 @@ a:hover.slidesjs-stop {
     color: white;
 }
 
-.delete:hover, .order_button:hover:not(.disabled) {
+.delete:hover, .order-button:hover:not(.disabled) {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
 }
 
@@ -874,34 +896,34 @@ a:hover.slidesjs-stop {
     font-family: 'Lobster', cursive;
 }
 
-.order_align {
+.order-align {
     font-size: 15px;
     text-align: right;
     padding-top: 0;
     vertical-align: inherit;
 }
 
-#order_hr {
+#order-hr {
     margin-left: 345px;
     width: 375px;
     opacity: 0.3;
 }
 
-#order_table {
+#order-table {
     margin-left: 260px;
     margin-bottom: 50px;
 }
 
-#order_table td, tr {
+#order-table td, tr {
     padding: 0 10px 5px 0;
  }
 
-#order_table input, textarea {
+#order-table input, textarea {
     background-image: url(../img/shadow.jpg);
     border: 1px solid gray;
 }
 
-#order_table input {
+#order-table input {
     height: 25px;
 }
 
