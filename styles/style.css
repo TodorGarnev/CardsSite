@@ -104,16 +104,18 @@ body {
 }
 
 #side-menu li .items-count {
-    background-color: white;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    background-color: fcd0c5;
+    margin-right: -13px;
+    padding: 0;
+    width: 35px;
+    height: 25px;
     text-align: center;
+    font-size: 15px;
 }
 
 #side-menu li .items-count span {
     display: block;
-    padding-top: 3px;
+    padding-top: 7px;
 }
 
 #facebook {
@@ -132,6 +134,7 @@ body {
 }
 
 #cart {
+    padding-left: 0;
     width: 50px;
     height: 50px;
     background-image: url(../img/cart.png);
@@ -142,7 +145,6 @@ body {
 #cart:hover {
     width: 65px;
     height: 65px;
-    background-image: url(../img/cart_green.png);
     background-size: contain;
     margin: -23px -10px 0 5px;
 }
@@ -150,13 +152,12 @@ body {
 /**** LOGO ****/
 
 #logo {
-    display: block;
+    //display: block;
     float: right;
     margin-top: -145px;
-    margin-right: 50px;
+    margin-left: 1000px;
     width: 300px;
     height: 150px;
-    //background-image: url(../img/logo1.gif);
     background-size: cover;
 }
 
@@ -394,7 +395,7 @@ a:hover.slidesjs-stop {
     border-radius: 50px;
     font-size: 14px;
     color: white;
-    margin-left: 35px;
+    margin-left: 30px;
 }
 
 .home-add-button a:hover {
