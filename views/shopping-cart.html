@@ -2,71 +2,74 @@
 	<div id="cards-title">Кошница</div>
 	<hr id="cards-hr">
 	<div class="empty-cart-msg" ng-if="items.length == 0">Вашата кошница е празна.</div>
-	<table id="cart-table" ng-if="items.length > 0">
-		<tr>
-			<th>№</th>
-			<th>Артикул</th>
-			<th>Брой</th>
-			<th>Цена</th>
-			<th></th>
-		</tr>
-		<tr ng:repeat="item in items">
-			<td>{{item.id}}</td>
-			<td>{{item.name}}</td>
-			<td><input type="text" maxlength="4" ng-keydown="validateNums($event)" ng-value="item.quantity" ng-model="quantity" />
-				<br>
-				<div class="update"ng-click="update(item.id, quantity)">[смени]</div>
-			</td>
-			<td ng-init="item.price * item.quantity">
-				{{item.price }} x {{ item.quantity }} = {{item.price * item.quantity }} лв.
-			</td>
-			<td><button class="delete" ng-click="delete(item.id)">изтрий</button></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td id="total">Общо: {{ total }} лв.</td>
-			<td></td>
-		</tr>
-	</table>
-	<br>
-	<div id="DeleteCart" ng-click="deleteAll()">[ Изпразни кошницата ]</div>
-	<p id="order">Поръчка</p>
-	<hr id="order-hr">
-	<form name="orderForm">
-		<table id="order-table">
+	<!--<div class="empty-cart-msg" ng-show="order()">Вашата поръчка е изпратена успешно.</div> -->
+	<div class="container-full" ng-show="items.length > 0">
+		<table id="cart-table">
 			<tr>
-				<td class="order-align">Име</td>
-				<td><input type="text" name="name" ng-required="true" ng-model="name"></td>
+				<th>№</th>
+				<th>Артикул</th>
+				<th>Брой</th>
+				<th>Цена</th>
+				<th></th>
 			</tr>
-			<tr>
-				<td class="order-align">Фамилия</td>
-				<td><input type="text" name="family" ng-required="true" ng-model="family"></td>
-			</tr>
-			<tr>
-				<td class="order-align">Адрес</td>
-				<td><textarea id="input-text" cols="50" rows="10" name="text" ng-model="text" ng-required="true"></textarea></td>
-			</tr>
-			<tr>
-				<td class="order-align">Email</td>
-				<td><input type="email" name="-replyto" ng-required="true" ng-model="email"></td>
-			</tr>
-			<tr>
-				<td class="order-align">Телефон</td>
-				<td><input type="text" name="gsm"></td>
-			</tr>
-			<tr>
-				<td class="order-align">Забележка</td>
-				<td><textarea id="input-text" cols="50" rows="10" name="text" ng-model="note" ng-required="true"></textarea></td>
+			<tr ng:repeat="item in items">
+				<td>{{item.id}}</td>
+				<td>{{item.name}}</td>
+				<td><input type="text" maxlength="4" ng-keydown="validateNums($event)" ng-value="item.quantity" ng-model="quantity" />
+					<br>
+					<div class="update"ng-click="update(item.id, quantity)">[смени]</div>
+				</td>
+				<td ng-init="item.price * item.quantity">
+					{{item.price }} x {{ item.quantity }} = {{item.price * item.quantity }} лв.
+				</td>
+				<td><button class="delete" ng-click="delete(item.id)">изтрий</button></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><button class="order-button"
-										ng-class="{'disabled': orderForm.$invalid}"
-										ng-disabled="orderForm.$invalid"
-										ng-click="order()">Поръчай</button></td>
+				<td></td>
+				<td></td>
+				<td id="total">Общо: {{ total }} лв.</td>
+				<td></td>
 			</tr>
 		</table>
-	</form>
+		<br>
+		<div id="DeleteCart" ng-click="deleteAll()">[ Изпразни кошницата ]</div>
+		<p id="order">Поръчка</p>
+		<hr id="order-hr">
+		<form name="orderForm">
+			<table id="order-table">
+				<tr>
+					<td class="order-align">Име</td>
+					<td><input type="text" name="name" ng-required="true" ng-model="name"></td>
+				</tr>
+				<tr>
+					<td class="order-align">Фамилия</td>
+					<td><input type="text" name="family" ng-required="true" ng-model="family"></td>
+				</tr>
+				<tr>
+					<td class="order-align">Адрес</td>
+					<td><textarea id="input-text" cols="50" rows="5" name="text" ng-model="text" ng-required="true"></textarea></td>
+				</tr>
+				<tr>
+					<td class="order-align">Email</td>
+					<td><input type="email" name="-replyto" ng-required="true" ng-model="email"></td>
+				</tr>
+				<tr>
+					<td class="order-align">Телефон</td>
+					<td><input type="text" name="gsm"></td>
+				</tr>
+				<tr>
+					<td class="order-align">Забележка</td>
+					<td><textarea id="input-text" cols="50" rows="10" name="text" ng-model="note" ng-required="false"></textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button class="order-button"
+											ng-class="{'disabled': orderForm.$invalid}"
+											ng-disabled="orderForm.$invalid"
+											ng-click="order()">Поръчай</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
 </div>

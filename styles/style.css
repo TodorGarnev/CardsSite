@@ -43,7 +43,7 @@ body {
     margin: 0;
     list-style-type: none;
     overflow: hidden;
-    width: 425px;
+    width: 440px;
     padding: 0;
 }
 
@@ -54,7 +54,7 @@ body {
 #menu li a {
     display: block;
     text-align: center;
-    width: 75px;
+    width: 77px;
     height: auto;
     padding: 5px;
     color: white;
@@ -277,33 +277,36 @@ a:hover.slidesjs-stop {
 
 #footer {
     margin-top: 20px;
-    margin-left: 780px;
+    margin-left: 350px;
 }
 
-#footer li {
-    display: block;
-    text-decoration: none;
+#footer div {
+    display: inline;
     float: left;
 }
 
-#footer li a {
+#footer div a {
     text-decoration: none;
     color: mediumvioletred;
-    padding: 0;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
     font-size: 13px;
-}
+    padding-top: 10px;
+ }
 
-#footer li span {
+#footer div span {
     padding-left: 15px;
     padding-right: 15px;
-    opacity: 0.5;
+    opacity: 0.3;
+ }
+
+.contact-footer a {
+    margin-top: 500px;
 }
 
 #copyright {
     text-align: right;
     margin-top: -10px;
-    margin-right: 450px;
+    margin-right: 10px;
     font-size: 13px;
     opacity: 0.5;
     color: darkred;
@@ -459,6 +462,8 @@ a:hover.slidesjs-stop {
     background-position: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
 
 /*******CONTACT*******/
 
@@ -835,7 +840,7 @@ a:hover.slidesjs-stop {
     border-radius: 3px;
     padding: 10px;
     width: 1000px;
-    height: auto;
+    min-height: 500px;
     background-color: whitesmoke;
     background-size: contain;
     background-position: center;
@@ -843,8 +848,10 @@ a:hover.slidesjs-stop {
 }
 
 .empty-cart-msg {
-    font-size: 17px;
+    margin-top: 100px;
+    font-size: 15px;
     text-align: center;
+    font-weight: bold;
 }
 
 #cart-table td, th {
@@ -904,10 +911,11 @@ a:hover.slidesjs-stop {
     font-size: 14px;
     cursor: pointer;
     margin-bottom: 100px;
+    color: black;
  }
 
 #DeleteCart:hover {
-    opacity: 0.5;
+    color: hotpink;
 }
 
 #total {
@@ -952,10 +960,6 @@ a:hover.slidesjs-stop {
     height: 25px;
 }
 
-#contact form td textarea {
-    background-image: url(../img/shadow.jpg);
-    border: 1px solid gray;
-}
 
 
 
