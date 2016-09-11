@@ -1,7 +1,7 @@
 /**** SITE BACKGROUND ****/
 
 body {
-    background: url(../img/background.jpg) repeat;
+    background: url(../img/back.jpg) no-repeat;
     background-color: fcd0c5;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
@@ -306,6 +306,7 @@ a:hover.slidesjs-stop {
     margin-right: 450px;
     font-size: 13px;
     opacity: 0.5;
+    color: darkred;
 }
 
 /**** WEEKLY OFFERS ****/
@@ -388,7 +389,7 @@ a:hover.slidesjs-stop {
 
 .home-add-button a {
     display: block;
-    width: 90px;
+    width: 96px;
     text-align: center;
     text-decoration: none;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
@@ -406,6 +407,18 @@ a:hover.slidesjs-stop {
 
 
 /*******ABOUT*******/
+
+#container-about {
+    margin: auto;
+    border-radius: 3px;
+    padding: 10px;
+    width: 1000px;
+    height: 680px;
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 #about div {
     margin-top: 50px;
@@ -449,48 +462,63 @@ a:hover.slidesjs-stop {
 
 /*******CONTACT*******/
 
-#contact {
-    margin-top: 25px;
+#container-contact {
+    margin: auto;
+    border-radius: 3px;
+    padding: 10px;
+    width: 1000px;
+    height: 700px;
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#contact div {
+    margin-top: 50px;
+    margin-left: 25px;
+    text-align: left;
+    font-size: 20px;
     font-family: 'Lobster', cursive;
 }
 
-.contact-info div {
-    margin: 50px 0 15px 25px;
-    text-align: left;
-    font-size: 20px;
-}
 
 #contact hr {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     opacity: 0.3;
 }
 
-.contact-info p {
-    margin-left: 50px;
-    width: 450px;
-    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+.contact-text {
+    font-size: 16px;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
 }
 
-.contact-text {
-    font-weight: bold;
+.contact-info p {
+    font-size: 16px;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 
 .contact-form form {
     display: block;
     margin-left: 650px;
-    margin-top: -170px;
+    margin-top: -295px;
     width: 300px;
 }
 
-#contact form hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
+.contact-form p {
+    margin-right: 120px;
+    float: right;
+    margin-bottom: 30px;
 }
 
-#contact form p {
-    margin: 0 0 -5px 100px;
-    font-size: 20px;
-    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+.contact-form input {
+    height: 30px;
+    margin-top: 5px;
+}
+
+.contact-form textarea {
+    margin-top: 5px;
 }
 
 #contact-button {
@@ -508,14 +536,11 @@ a:hover.slidesjs-stop {
 
 .align {
     text-align: right;
+    font-size: 15px;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 
-#contact form td input {
-    background-image: url(../img/shadow.jpg);
-    border: 1px solid gray;
-}
-
-#contact form td textarea {
+#contact form td input, textarea {
     background-image: url(../img/shadow.jpg);
     border: 1px solid gray;
 }
@@ -593,7 +618,7 @@ a:hover.slidesjs-stop {
 
 .card-add-button a {
     display: block;
-    width: 90px;
+    width: 96px;
     text-align: center;
     text-decoration: none;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D5E0), to(#F27298));
