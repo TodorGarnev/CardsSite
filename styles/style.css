@@ -23,7 +23,7 @@ body {
     border-radius: 3px;
     padding: 10px;
     width: 1000px;
-    min-height: 500px;
+    height: auto;
     background-color: whitesmoke;
     background-size: contain;
     background-position: center;
