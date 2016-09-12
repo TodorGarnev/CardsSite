@@ -1,6 +1,7 @@
 // The main cart controller
 myCardSiteControllers.controller('CartCtrl', function ($rootScope, $scope, dbFactory, Events) {
 	$scope.items = {};
+	$scope.isOrdered = false;
 
 	var getAll = function() {
 		var cardsDataPromise = dbFactory.getAll();
@@ -47,5 +48,6 @@ myCardSiteControllers.controller('CartCtrl', function ($rootScope, $scope, dbFac
 		dbFactory.deleteAll();
 		getAll();
 		$rootScope.$broadcast(Events.UPDATE);
+		$scope.isOrdered = true;
 	};
 });

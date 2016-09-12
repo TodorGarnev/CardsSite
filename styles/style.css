@@ -18,12 +18,12 @@ body {
     margin-top: 150px;
 }
 
-#container {
+.container {
     margin: auto;
     border-radius: 3px;
     padding: 10px;
     width: 1000px;
-    height: 750px;
+    height: auto;
     background-color: whitesmoke;
     background-size: contain;
     background-position: center;
@@ -35,7 +35,7 @@ body {
 .top-menu {
     margin: 0;
     padding-left: 0;
-    left: 3%;
+    left: 2%;
     position: relative;
 }
 
@@ -43,18 +43,20 @@ body {
     margin: 0;
     list-style-type: none;
     overflow: hidden;
-    width: 440px;
+    width: 455px;
     padding: 0;
 }
 
 #menu li {
     float: left;
+    width: 77px;
+    padding: 0 5px;
 }
 
 #menu li a {
     display: block;
     text-align: center;
-    width: 77px;
+    width: 100%;
     height: auto;
     padding: 5px;
     color: white;
@@ -80,6 +82,17 @@ body {
     color: white;
     font-weight: bold;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ebacc2), to(#ee4376));
+}
+
+/*******CARDS DROPDOWN*******/
+
+#dropdown ul {
+    position: absolute;
+    width: 92px;
+    display: none;
+    padding: 0;
+    z-index: 5000;
+    left: 8.7%;
 }
 
 /**** SIDE MENU ICONS ****/
@@ -276,13 +289,21 @@ a:hover.slidesjs-stop {
 /**** FOOTER ****/
 
 #footer {
-    margin-top: 20px;
-    margin-left: 350px;
+    margin: 20px auto;
+    position: relative;
+    width: 300px;
 }
 
 #footer div {
     display: inline;
     float: left;
+    margin-right: 10px;
+    border-right: 1px solid grey;
+    padding-right: 10px;
+}
+
+#footer div:last-child {
+    border: none;
 }
 
 #footer div a {
@@ -291,12 +312,6 @@ a:hover.slidesjs-stop {
     font-family: Tahoma, Verdana, Segoe, sans-serif;
     font-size: 13px;
     padding-top: 10px;
- }
-
-#footer div span {
-    padding-left: 15px;
-    padding-right: 15px;
-    opacity: 0.3;
  }
 
 .contact-footer a {
@@ -400,7 +415,7 @@ a:hover.slidesjs-stop {
     border-radius: 50px;
     font-size: 14px;
     color: white;
-    margin-left: 30px;
+    margin: 0 0 20px 30px
 }
 
 .home-add-button a:hover {
@@ -410,18 +425,6 @@ a:hover.slidesjs-stop {
 
 
 /*******ABOUT*******/
-
-#container-about {
-    margin: auto;
-    border-radius: 3px;
-    padding: 10px;
-    width: 1000px;
-    height: 680px;
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 #about div {
     margin-top: 50px;
@@ -441,7 +444,7 @@ a:hover.slidesjs-stop {
 }
 
 #about hr {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     opacity: 0.3;
 }
 
@@ -449,35 +452,8 @@ a:hover.slidesjs-stop {
     font-weight: bold;
 }
 
-/*******ORDER*******/
-
-#container-order {
-    margin: auto;
-    border-radius: 3px;
-    padding: 10px;
-    width: 1000px;
-    height: 550px;
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
 
 /*******CONTACT*******/
-
-#container-contact {
-    margin: auto;
-    border-radius: 3px;
-    padding: 10px;
-    width: 1000px;
-    height: 700px;
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 #contact div {
     margin-top: 50px;
@@ -551,18 +527,6 @@ a:hover.slidesjs-stop {
 }
 
 /*******CARDS*******/
-
-#container-cards {
-    margin: auto;
-    border-radius: 3px;
-    padding: 10px;
-    width: 1000px;
-    height: 750px;
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 #cards-title {
     margin: 20px 0 0 25px;
@@ -646,20 +610,6 @@ a:hover.slidesjs-stop {
 
 #flowers td {
     padding: 40 10 0 37;
-}
-
-/*******CARDS DROPDOWN*******/
-
-#dropdown ul {
-    position: absolute;
-    width: 85px;
-    display: none;
-    padding: 0;
-    z-index: 5000;
-}
-
-#dropdown ul li a {
-    height: auto;
 }
 
 /*******CARDS SINGLE PAGE*******/
@@ -791,6 +741,8 @@ a:hover.slidesjs-stop {
     height: 30px;
     line-height: 30px;
     padding-left: 7px;
+    background-image: url(../img/shadow.jpg);
+    border: 1px solid gray;
 }
 
 #input-price {
@@ -828,24 +780,8 @@ a:hover.slidesjs-stop {
     font-size: 15px;
 }
 
-#container-singlecard input {
-    background-image: url(../img/shadow.jpg);
-    border: 1px solid gray;
-}
 
 /*******SHOPPING CART*******/
-
-.container-cart {
-    margin: auto;
-    border-radius: 3px;
-    padding: 10px;
-    width: 1000px;
-    min-height: 500px;
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 .empty-cart-msg {
     margin-top: 100px;

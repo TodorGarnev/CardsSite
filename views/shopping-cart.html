@@ -1,8 +1,8 @@
-<div class="container-cart" ng-controller="CartCtrl">
+<div class="container" ng-controller="CartCtrl">
 	<div id="cards-title">Кошница</div>
 	<hr id="cards-hr">
-	<div class="empty-cart-msg" ng-if="items.length == 0">Вашата кошница е празна.</div>
-	<!--<div class="empty-cart-msg" ng-show="order()">Вашата поръчка е изпратена успешно.</div> -->
+	<div class="empty-cart-msg" ng-if="items.length == 0 && !isOrdered">Вашата кошница е празна.</div>
+	<div class="empty-cart-msg" ng-show="isOrdered">Вашата поръчка е изпратена успешно.</div>
 	<div class="container-full" ng-show="items.length > 0">
 		<table id="cart-table">
 			<tr>
@@ -13,14 +13,14 @@
 				<th></th>
 			</tr>
 			<tr ng:repeat="item in items">
-				<td>{{item.id}}</td>
+				<td>{{$index+1}}</td>
 				<td>{{item.name}}</td>
 				<td><input type="text" maxlength="4" ng-keydown="validateNums($event)" ng-value="item.quantity" ng-model="quantity" />
 					<br>
 					<div class="update"ng-click="update(item.id, quantity)">[смени]</div>
 				</td>
 				<td ng-init="item.price * item.quantity">
-					{{item.price }} x {{ item.quantity }} = {{item.price * item.quantity }} лв.
+					{{item.price | number:2 }} x {{ item.quantity }} = {{item.price | number:2 * item.quantity }} лв.
 				</td>
 				<td><button class="delete" ng-click="delete(item.id)">изтрий</button></td>
 			</tr>
@@ -28,7 +28,7 @@
 				<td></td>
 				<td></td>
 				<td></td>
-				<td id="total">Общо: {{ total }} лв.</td>
+				<td id="total">Общо: {{ total | number:2 }} лв.</td>
 				<td></td>
 			</tr>
 		</table>
