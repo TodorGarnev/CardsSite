@@ -20,7 +20,7 @@
 					<div class="update"ng-click="update(item.id, quantity)">[смени]</div>
 				</td>
 				<td ng-init="item.price * item.quantity">
-					{{item.price | number:2 }} x {{ item.quantity }} = {{item.price | number:2 * item.quantity }} лв.
+					{{item.price | number:2 }} x {{ item.quantity }} = {{item.price  * item.quantity | number:2 }} лв.
 				</td>
 				<td><button class="delete" ng-click="delete(item.id)">изтрий</button></td>
 			</tr>
