@@ -166,7 +166,6 @@ body {
 /**** LOGO ****/
 
 #logo {
-    //display: block;
     float: right;
     margin-top: -145px;
     margin-left: 1000px;
@@ -178,7 +177,7 @@ body {
 /**** SLIDER ****/
 
 .slider {
-        width: 800px;
+    width: 800px;
     height: 300px;
     margin: 25px auto auto 100px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -553,7 +552,6 @@ a:hover.slidesjs-stop {
 }
 
 .card-image img {
-    margin-bottom: 10px;
     border: 7px solid #ffe1e6;
     width: 180px;
     height: 180px;
@@ -609,7 +607,7 @@ a:hover.slidesjs-stop {
 }
 
 #flowers td {
-    padding: 40 10 0 37;
+    padding: 40px 10px 0px 37px;
 }
 
 /*******CARDS SINGLE PAGE*******/
@@ -792,7 +790,6 @@ a:hover.slidesjs-stop {
 
 #cart-table td, th {
     border: 1px solid lightpink;
-    padding: 5px;
     text-align: center;
     padding: 10px;
 }

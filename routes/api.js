@@ -1,14 +1,11 @@
-// Dependencies
 var express = require('express');
 var router = express.Router();
 var mysql = require("mysql");
 
-//GET request to index.html during loading of the page
 router.get('/', function(req, res){
 	res.redirect('/index.html');
 });
 
-// Connection to DB (MySQL)
 var con = mysql.createConnection({
 	host: "localhost",
 	user: "root",
@@ -16,7 +13,6 @@ var con = mysql.createConnection({
 	database: "card_site"
 });
 
-//information in the console.log about connection to DB - completed/error
 con.connect(function(err){
 	if(err){
 		console.log('Error connecting to Db');
@@ -25,7 +21,6 @@ con.connect(function(err){
 	console.log('Connection established');
 });
 
-//GET request to /cards
  router.get('/cards', function(req, res) {
 	con.query('SELECT * FROM cards', function (err, rows) {
 		if(err) throw err;
@@ -42,28 +37,17 @@ con.connect(function(err){
 			}
 			arrCards.push(objData);
 		}
-
-		//console.log('>>> arr: ', arrCards); //it is shown in nodejs console log
-
-		res.send({'data': arrCards}); //its is shown in /cards; we send this data to cart-controller.js
+		res.send({'data': arrCards});
 	});
 });
 
-
-//POST request to /add
 router.post('/add', function(req, res) {
-    /*console.log('>>> name:', req.body.name);
-    console.log('>>>> price:', req.body.price);
-    console.log('>>> quantity:', req.body.quantity);*/
     var objCard = { name: req.body.name, price: req.body.price, quantity: req.body.quantity };
     con.query('INSERT INTO cards SET ?', objCard, function(err, res){
         if(err) throw err;
-
-        //console.log('>>> affectedRows: ',res.affectedRows);
-    });
+	 });
 });
 
-//UPDATE request to /update
 	router.put('/update/:id/:quantity', function(req, res) {
 	console.log('>>> id:', req.params.id);
 	console.log('>>> quantity:', req.params.quantity);
@@ -71,32 +55,24 @@ router.post('/add', function(req, res) {
 	if (req.params.id) {
 		con.query('UPDATE cards SET quantity = ? Where ID = ?', [req.params.quantity, req.params.id], function (err, result) {
 			if (err) throw err;
-
-			//console.log('Changed ' + result.changedRows + ' rows');
 		});
 	}
 });
 
-//DELETE request to /del/:id
 router.delete('/del/:id', function(req, res) {
 	console.log('>>> id:', req.params.id);
 	if (req.params.id) {
 		con.query('DELETE FROM cards WHERE id = ?', req.params.id, function (err, result) {
-			if (err) throw err;
-
-			//console.log('Deleted rows: ', res.complete);
+			if (err) throw err
 		});
 	}
 });
 
-//DELETE request to /del
+
 router.delete('/del', function(req, res) {
 	con.query('DELETE FROM cards', function (err, result) {
 		if (err) throw err;
-
-		console.log('Deleted all rows');
 	});
 });
 
-// Return router
 module.exports = router;

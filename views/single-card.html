@@ -18,7 +18,7 @@
 			 <p id="buy-header">Добави в кошницата:</p>
 			 <hr id="buy-line">
 			 <div>
-					 <span id="input-count">бр.:</span><input  type="text" name="count" ng-init="quantity=1" ng-model="quantity" maxlength="4" />
+					 <span id="input-count">бр.:</span><input  type="text" name="count" ng-init="quantity=1" ng-model="quantity" maxlength="4" ng-keydown="validateNums($event)" />
 					 <span id="input-price">цена:</span><input  type="text" name="price" value="{{ price }} " readonly /> лв.
 					 <li id="add"><a href ng-click="addCard()">добави</a></li>
 			 </div>

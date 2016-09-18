@@ -8,6 +8,12 @@ myCardSiteControllers.controller('SingleCardCtrl',
 		$window.history.back();
 	};
 
+	$scope.validateNums = function (event) {
+		if (isNaN(parseInt(event.key))) {
+			event.preventDefault();
+		}
+	};
+
 	$scope.addCard = function () {
 		var objCard = { name: $scope.name, price: $scope.price, quantity: $scope.quantity };
 		dbFactory.add(objCard);

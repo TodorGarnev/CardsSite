@@ -8,8 +8,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(express.static(__dirname + '/'));
-
-// Routes
 app.use('/', require('./routes/api'));
 
 app.listen(8000);
